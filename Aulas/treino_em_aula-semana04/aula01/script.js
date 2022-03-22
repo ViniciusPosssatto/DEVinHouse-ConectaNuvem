@@ -159,3 +159,53 @@ if (1) {
 }
 
 console.log(foo);
+
+// a baixo exemplos de classes e objetos
+
+function criaPessoa(nome, idade, rg) {
+  const novaPessoa = {}
+  novaPessoa.nome = nome
+  novaPessoa.idade = idade
+  novaPessoa.rg = rg
+  return novaPessoa
+}
+// const pessoa = criaPessoa('Juliana', 26, '7235654453');
+
+class Pessoa {
+  constructor(nome, idade, rg) {
+    this.nome = nome
+    this.idade = idade
+    this.rg = rg
+  }
+
+  correr() {
+    console.log(`${this.nome} está correndo!`);
+  }
+}
+
+const ju = new Pessoa('Juliana', 26, '7235654453');
+const romeu = new Pessoa('Romeu', 29, '7344654453');
+
+console.log(ju, romeu);
+
+console.log(ju.nome)
+
+romeu.correr();
+
+class Template {
+  constructor(id, html) {
+    this.elem = document.getElementById(id);
+    this.html = html;
+  }
+  modelo(conteudo) {
+    return `<span style="color:red">${conteudo}</span>`
+  }
+  atualiza() {
+    this.elem.innerHTML = 
+      this.modelo(this.html)
+  }
+}
+
+const div = new Template('teste', 'oi');
+console.log(div)
+div.atualiza()
