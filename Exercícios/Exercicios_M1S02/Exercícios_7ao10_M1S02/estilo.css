@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    position: relative;
+}
+.box{
+    position: absolute;
+    top: 150px;
+    right: 35%;
+    background-color: rgb(187, 201, 201);
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid;
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px;
+}
+.form-group{
+    padding: 5px;
+}

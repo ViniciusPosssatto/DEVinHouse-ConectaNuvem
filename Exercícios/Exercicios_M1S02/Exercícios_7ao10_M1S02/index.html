@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <title>Formulário Simples</title>
+    </head>
+    <body>
+        <div class="box">
+            <form name="formulario" onsubmit="validarFormulario()" method="get">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Digite seu Sobrenome: </label>
+                    <input type="text" name="sobrenome" class="form" id="txtsobrenome" placeholder="sobrenome">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Digite seu nome:</label>
+                    <input type="text" name="nome" class="form" id="txtnome" placeholder="nome">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput3">Digite seu telefone:</label>
+                    <!-- Permite somente números sem letras -->
+                    <input type="text" name="telefone" class="form" id="txttelefone" onkeypress="onlynumber()" placeholder="telefone">
+                    <!--<input type="text" name="telefone" class="form" placeholder="telefone">-->
+                </div>
+                <div class="form-group">
+                    <button name="botao" type="submit" onclick="enviar()">Enviar meus dados</button>
+                </div>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

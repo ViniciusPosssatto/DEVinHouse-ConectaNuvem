@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Ideal_Viagens</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="principal">
+        <header>
+            <img class="logo" src="imagens/logo.png" alt="Ideal_Viagens_logo">
+			<div class="agencia">
+                <h1>Ideal_Viagens - Agência de turismo</h1>
+            </div>
+		</header>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="">Destinos</a>
+            <a href="">Promoções Ativas</a>
+            <a href="">Minhas Reservas</a>
+            <a href="">Área do inscrito</a>
+        </nav>
+
+        <aside>
+            <a class="promo_lateral" href="imagens/cataratas_iguacu.jpeg">
+                <img class="img_lateral" src="imagens/cataratas_iguacu.jpeg" alt="cataratas_iguacu">
+            </a>
+            <div class="promo">
+                <h2>50% de desconto para Cataratas do Iguaçu!!!</h2>
+                <p>Clique na imagem para resgatar</p>
+            </div>
+		</aside>
+
+        <section class="formulario">
+			<div class="imgcentral">
+                <div class="texto">
+                    <p>Participe da maior rede de descontos em passagens e pacotes de viagens de toda a internet!</p>
+                    <p>Não perca essa mega oportunidade de viajar por todo o mundo e viver momentos inesquecíveis!</p>
+                    <p>E o melhor de tudo: gastando muito MENOS!!!</p>
+                </div>
+            </div>
+            <form name="inscreva" onsubmit="validarFormulario()" method="get">
+                <h2 class="inscreva">Inscreva-se =</h2>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome">
+                <hr>
+                <label for="email">E-mail </label>
+                <input type="text" name="email">
+                <hr>
+                <label for="telefone">Telefone</label>
+                <input type="text" name="telefone">
+                <hr>
+                <label for="idade">Data de nascimento</label>
+                <input type="text" name="idade">
+                <hr>        
+                <label for="deseja">Deseja receber ofertas diárias?</label>
+                <input type="radio" name="deseja" value="Sim">
+                <label for="sim">Sim</label>
+                <input type="radio" name="deseja" value="Não">
+                <label for="não">Não</label>
+                <hr>
+                <button onclick="enviar()">Enviar meus dados</button>
+            </form>
+		</section>
+             
+        <footer>
+            Ideal_Viagens - Agência de turismo ltd. - Direitos reservados
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+h1 {
+    text-size-adjust: 31px;
+    color: grey;
+}
+p {
+    text-align: left;
+    text-size-adjust: 17px;
+    color: green;
+}
+
+a {
+    color: rgb(192, 13, 183);
+}
