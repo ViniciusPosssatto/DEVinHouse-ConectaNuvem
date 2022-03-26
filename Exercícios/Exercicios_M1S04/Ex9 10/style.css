@@ -47,29 +47,3 @@ button{
 button:hover{
     background-color: rgb(34, 34, 54);
 }
-
-.conteudo{
-    margin-top: 15px;
-}
-
-table{
-    border-collapse: collapse;
-    border: 1px solid black;
-    width: 100%;
-}
-table th{
-    background-color: rgb(57, 59, 59);
-    padding: 10px;
-    color: aliceblue;
-    text-align: center;
-
-}
-.center{
-    text-align: center;
-}
-
-tbody img{
-    width: 30px;
-    height: 30px;
-    padding: 0 10px 0 10px;
-}
