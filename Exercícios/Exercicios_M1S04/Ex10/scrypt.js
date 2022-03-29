@@ -88,8 +88,10 @@ class Transacao{
 console.log(this.data);
 const cliente1 = new Transacao(3000, 380)
 
+//teste 1 para a contagem de transações
 cliente1.transferencia('4233-3');
-//cliente1.transferencia('3435-2')
+//teste 2 para a contagem de transações
+cliente1.transferencia('3435-2')
 
 //quando faz pagamento com pix
 //cliente1.transferencia();
