@@ -58,16 +58,17 @@ class Transacao{
     transferencia(contaDestino,){
         let desconta = this.getsaldoEmConta() - this.getsaldoTransacao();
 
-        if (this.getsaldoEmConta() < 0 || this.getsaldoEmConta() < this.getsaldoTransacao()){
+        
+        this.contaDestino
+        this.data
 
+        if (this.getsaldoEmConta() < 0 || this.getsaldoEmConta() < this.getsaldoTransacao()){
             this.getidTransacao()
-            this.contaDestino
-            this.data
-            
-            console.log('Você não possui saldo em conta, suficiente para o pagamento deste item.')
+            console.log('Você não possui saldo em conta suficiente para o pagamento deste item.')
             console.log(`Saldo disponível = R$${this.getsaldoEmConta()}`);
 
         } else if (this.getsaldoEmConta() >= this.getsaldoTransacao()){
+            this.setData();
 
             console.log(`Sua transação de número ${this.getidTransacao()} foi efetuada.`);
             console.log(`O valor de R$${this.getsaldoTransacao()} foi enviado para a conta ${contaDestino} na data de ${this.data}.`)
@@ -77,8 +78,8 @@ class Transacao{
     deposito(){
         
         this.getidTransacao()
-        this.contaDestino
         this.getData()
+        this.getsaldoTransacao()
 
         let soma = this.getsaldoEmConta() + this.getsaldoTransacao();
         return console.log(`Você recebeu um pix no valor de R$${this.getsaldoTransacao()} (transação nº ${this.getidTransacao()}) em ${this.getData()}, seu saldo agora é de R$${soma}.`);
@@ -86,14 +87,12 @@ class Transacao{
 }
 
 console.log(this.data);
-const cliente1 = new Transacao(3000, 380)
+const cliente1 = new Transacao(3000, 380);
+const cliente2 = new Transacao(300, 390);
 
 //teste 1 para a contagem de transações
 cliente1.transferencia('4233-3');
 //teste 2 para a contagem de transações
-cliente1.transferencia('3435-2')
-
-//quando faz pagamento com pix
-//cliente1.transferencia();
-//quando recebe pagamentos de pix
-//cliente1.deposito();
+cliente2.transferencia('3435-2')
+// teste para deposito
+cliente1.deposito();
