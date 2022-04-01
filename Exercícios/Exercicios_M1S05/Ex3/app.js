@@ -27,13 +27,9 @@ function procurar(nome, lista){
 
 botao.addEventListener('click', filtra);
 
-const vetObj = produtos.map(o => o.preco)
 
-//console.log(vetObj);
+const vetObjTotal = produtos.reduce((acc, item) => {
+    return acc + item.preco;
+}, 0);
 
-const vetObjTotal = vetObj.forEach(soma => {
-    //soma + 0
-    console.log(soma)
-});
-
-//console.log(vetObjTotal);
+total.innerHTML = `O valor total dos produtos é R$${vetObjTotal},00.`
