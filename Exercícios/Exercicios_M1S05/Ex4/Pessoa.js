@@ -12,7 +12,7 @@ class Pessoa{
     }
 
     imprime(){
-        return `O seu nome é ${this.nome} e o seu CPF é ${this.cpf}.`;
+        return `O seu nome é ${this.nome} e o seu CPF é ${this.#cpf}.`;
     }
 }
 

@@ -12,7 +12,7 @@ const produtos = [
     ];
 
 const filtra = (() => {
-    let item = procurar(nome.value, produtos)
+    let item = procurar(nome.value)
     if(item){
         msg.innerHTML = `Produto encontrado! O preço de ${item.nome} é: R$${item.preco},00.`;
     }else{
