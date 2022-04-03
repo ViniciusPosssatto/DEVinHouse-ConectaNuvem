@@ -4,7 +4,7 @@ const imgCat = document.getElementById('img-cat');
 // https://api.thecatapi.com/v1/images/search
 const URL = 'https://api.thecatapi.com/v1/images/search';
 
-async function showMeTheCat() {
+async function mostraGato() {
   try {
 
     const response = await fetch(URL);
@@ -18,8 +18,8 @@ async function showMeTheCat() {
   }
 }
 
-btnCat.addEventListener('click', showMeTheCat);
+btnCat.addEventListener('click', mostraGato);
 
-// showMeTheCat();
+// mostraGato();
 // ou
-window.onload = showMeTheCat;
+window.onload = mostraGato;
