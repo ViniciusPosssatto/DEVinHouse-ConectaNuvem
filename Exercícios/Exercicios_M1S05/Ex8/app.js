@@ -10,4 +10,5 @@ console.log(arroz, feijao, batata, macarrao);
 
 const total = calculaTotal(arroz, feijao, batata, macarrao);
 console.log(total);
+
 // total deve ser 88
