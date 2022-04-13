@@ -1,6 +1,6 @@
 body {
     background-image: url(imagens/aviao_1.jpeg);
-    background-position: 50%;
+    background-position: 30%;
     padding: 0;
     margin: 0;
 
@@ -38,7 +38,7 @@ body {
 header{
     margin-top: 10px;
     position: relative;
-    background-color: rgb(109, 105, 105, 0.8);
+    background-color: rgb(109, 105, 105, 0.3);
     display: inline-flex;
     grid-area: cabecalho;    
 }
@@ -83,7 +83,7 @@ section {
 }
 #enviar input:hover{
     color: black;
-    background-color: #fdcece;
+    background-color: #cf0d0d;
     position: relative;
 }
 aside {

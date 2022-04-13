@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1S07-Aula01</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+    <div id="app">
+        <div>
+            <h1>Primeira aula</h1>
+        </div>
+        <div class="main">
+            <div>
+                <p class="texto">Digite seu nome:</p>
+                <input type="text" id="cx_texto_nome" v-model="nomeAluno" placeholder="Ex. Juliana">
+                <input type="number" id="cx_texto_nome" v-model="idade" placeholder="Digite sua idade">
+            </div>
+        
+            <div v-if="nomeAluno">
+                <p class="texto"> {{ nomeAluno }}, de {{ idade }} anos, Bem vindo(a) ao mundo VueJS!</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                nomeAluno: null,
+                idade: null,
+                }
+            }
+        }).mount('#app');
+    </script>
+    <style>
+        body{
+            background-color: grey;
+        }
+        h1{
+            font-size: 40px;
+        }
+        #app{
+            position: absolute;
+            left: 35%;
+        }
+        .main{
+            margin-top: 50%;
+            margin-left: 20%;
+        }
+        .texto{
+            color: azure;
+            font-size: 20px;
+        }
+        #cx_texto_nome{
+            width: 200px;
+            margin: 10px 0;
+            padding: 10px;
+        }
+    </style>
+    
+</body>
+</html>

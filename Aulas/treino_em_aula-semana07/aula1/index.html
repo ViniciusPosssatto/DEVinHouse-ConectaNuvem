@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1S07-Aula01</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+    <div id="app">
+        <p>O meu nome é: {{ nome }} e tenho {{ idade }} anos.</p>
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                nome: "Vinicius",
+                idade: 27,
+                }
+            }
+        }).mount('#app');
+    </script>
+    
+    
+</body>
+</html>
