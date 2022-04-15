@@ -7,22 +7,39 @@
     <title>M1S07-Aula01</title>
     <script src="https://unpkg.com/vue@3"></script>
 </head>
-<body>
 
+<body>
     <div id="app">
-        <p>O meu nome é: {{ nome }} e tenho {{ idade }} anos.</p>
-    </div>
-    <script>
-        Vue.createApp({
-            data() {
-                return {
-                nome: "Vinicius",
-                idade: 27,
-                }
-            }
-        }).mount('#app');
-    </script>
+        <h1>Primeiro contato com VueJS</h1>
+
+        <div id="container">
+            <label for="">Digite seu nome</label>
+            <input v-model="nome" type="text" :placeholder="placeHolderNome">
     
+            <label for="">Digite sua idade</label>
+            <input v-model="idade" type="text" :placeholder="placeholderIdade">
+        </div>
+        
+        <p v-show="nome && idade">Olá, meu nome é {{ nome }}, e tenho {{ idade }} anos! Vamos aprender VueJS!</p>
+
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+
+        Vue.createApp({
+          data() {
+            return {
+              nome: null,
+              idade: null,
+              placeHolderNome: "Digite seu nome",
+              placeholderIdade: "Digite sua idade"
+
+            }
+          }
+        }).mount('#app')
+
+      </script>
     
 </body>
 </html>
