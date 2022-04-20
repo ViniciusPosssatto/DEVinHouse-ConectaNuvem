@@ -61,6 +61,7 @@ export default {
             erroNome: false,
             erroValor: false,
             msg_tabela: 'Coloque um produto para começar a lista',
+            indice: null,
             lista: []
         }
     },
@@ -72,6 +73,8 @@ export default {
                     valor: this.produtos.valor
                 })
             }
+            this.produtos.nome = '';
+            this.produtos.valor = '';
             
         },
         
@@ -96,6 +99,17 @@ export default {
         },
         deletaProduto(indice) {
             this.lista.splice(indice, 1);
+        },
+        //ainda não está funcionando
+        editar() {
+            if (this.indice == null) {
+                console.log('nome')
+                console.log(this.lista)
+                this.nome = this.produtos.nome;
+            }
+            return this.indice = !null
+            
+           
         }
     
     }
