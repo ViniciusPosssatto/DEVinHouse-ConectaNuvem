@@ -7,6 +7,7 @@
     </div>
 
     <Relogio @addlista="marcarVolta" :listaVoltas="listadeVoltas" :hora="hora < 10 ? '0'+hora : hora" :minuto="minuto < 10 ? '0'+minuto : minuto" :segundos="segundos < 10 ? '0'+segundos : segundos"/>
+    <MarcadorV :listadeVoltas="listaVoltas"/>
 </div>
   
 </template>

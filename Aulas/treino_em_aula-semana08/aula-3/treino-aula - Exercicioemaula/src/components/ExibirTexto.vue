@@ -14,7 +14,8 @@ export default {
             idade: null,
             maiorIdade: null
         }
-    },
+    },       // dois modos para exibir a mesma coisa
+    //modo 1
     created(){
         barramento.$on('idadeEmitida', idade => {
             this.idade = idade
@@ -26,6 +27,7 @@ export default {
         })
         
     },
+    //modo 2
     computed: {
         verificaMaiorIdade() {
             barramento.$on('idadeEmitida', idade => {

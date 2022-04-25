@@ -3,10 +3,10 @@
     <Relogio :listaVoltas="listadeVoltas"/>
       <div v-show="listadeVoltas.length > 0" id="listaVoltas">
             <ul v-for="(item, key) in listadeVoltas" :key="key">
-              <li>{{key - item}}</li>
+              <li>{{key + 1}} + {{item}}</li>
             </ul>
         </div>
-        <button  @click="$emit('addlista', [hora, minuto, segundos])">Marcar Volta</button>
+        <button  @click.prevent="$emit('addlista', [hora, minuto, segundos])">Marcar Volta</button>
   </div>
 </template>
 
@@ -20,7 +20,13 @@ export default {
     Relogio,
     },
     props: {
-     listadeVoltas: []   
+      hora: String,
+      minuto: String,
+      segundos: String,
+      milisegundos: String,
+      listadeVoltas: {
+       type: Array
+     }  
     },
     methods: {
     
