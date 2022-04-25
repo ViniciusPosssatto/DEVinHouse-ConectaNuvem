@@ -1,6 +1,6 @@
 <template>
-
-    <div class="msg-tabela" v-if="lista.length == 0">
+<div>
+    <div class="msg-tabela" v-if="movimentacoes.length == 0">
         <h5 v-text="msg_tabela"></h5>
     </div>
     <!-- Montagem da tabela -->
@@ -19,9 +19,9 @@
                 <th>{{indice + 1}}</th>
                 <th>{{item.nome}}</th>
                 <th> R$ {{item.valor}}</th>
-                <th> R$ {{item.info}}</th>
-                <th> R$ {{item.data}}</th>
-                <th> R$ {{item.tipo}}</th>
+                <th>{{item.info}}</th>
+                <th>{{item.data}}</th>
+                <th>{{item.tipo}}</th>
                 <th>
                     <!-- botões de ação para cada item -->
                     <button class="btn-acao" type="button" @click="editar(indice)">Editar</button>
@@ -30,7 +30,7 @@
             
             </tbody>
     </table>
-        
+</div>       
 </template>
 
 <script>

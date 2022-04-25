@@ -41,7 +41,8 @@
                             <label for="tipo">Tipo de dado</label>
                             <Field class="form-select" name="tipo" as="select" :rules="validacao.validarCampos" />
                                 <option selected disabled>Selecione uma opção</option>
-                                <option v-for="tipo in tipos" :key="tipo">{{ tipo }}</option>
+                                <option v-for="tipo in tipos" :key="tipo" :value="tipo">{{ tipo }}</option>
+                                <ErrorMessage name="tipo    "/>
                         </div>
 
                     <!-- botões de ação -->

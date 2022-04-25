@@ -1,83 +1,58 @@
 <template>
-
-    <div class="msg-tabela" v-if="lista.length == 0">
+<div>
+    
+    <!-- <div class="msg-tabela" v-if="this.lista.length == 0">
         <h5 v-text="msg_tabela"></h5>
-    </div>
+    </div> -->
     <!-- Montagem da tabela -->
-    <table class="table table-striped">
+    <table class="table table-striped" v-if="listas.length > 0">
         <thead>
             <th>indice</th>
             <th>Nome</th>
+            <th>Qauntidade</th>
             <th>Valor</th>
             <th>Ações</th>
             
-            </thead> 
-            <tbody v-for="(item, indice) in lista" :key="indice">
+        </thead> 
+            <tbody v-for="(item, indice) in listas" :key="indice">
                 <th>{{indice + 1}}</th>
                 <th>{{item.nome}}</th>
+                <th>{{item.qtdade}}</th>
                 <th> R$ {{item.valor}}</th>
                 <th>
                     <!-- botões de ação para cada item -->
                     <button class="btn-acao" type="button" @click="editar(indice)">Editar</button>
-                    <button class="btn-acao" type="button" @click="deletaProduto(indice)">Excluir</button>
+                    <button class="btn-acao" type="button" @click="excluirProduto(indice)">Excluir</button>
                 </th>
             
             </tbody>
     </table>
-        
+    <span v-else>Clique no botão para comçar sua lista!</span>
+    
+</div>       
 </template>
 
 <script>
 export default {
-    name: 'primeiroComponente',
-    data(){
-        return {
-            
-            produtos: {
-                nome: null,
-                valor: null
-            },
-            mensagemErro: null,
-            erroNome: false,
-            erroValor: false,
-            msg_tabela: 'Clique no botão para começar a lista',
-            lista: []
+name: 'primeiroComponente',
+    props: {
+        listas: {
+            type: Array,
+            require: true,
+            default: null
         }
     },
-    methods: {
-        submit() {
-            if (this.validar(this.produtos)){
-                this.lista.push({
-                    nome: this.produtos.nome,
-                    valor: this.produtos.valor
-                })
-            }
-            
-        },
-        
-        //irá ser adicionado a função EDITAR aqui   
-
-        validar(produtos) {
-            if(!produtos.nome) {
-                this.mensagemErro = 'Preencha o campo nome produto!'
-                this.erroNome = true
-                return false
-            } else if (!produtos.valor) {
-                this.mensagemErro = 'Do valor também!'
-                this.erroNome = true
-                return false
-            }
-            return true;
-        },
-
-        cancelar(){
-            this.produtos.nome = '';
-            this.produtos.valor = '';
-        },
-        deletaProduto(indice) {
-            this.lista.splice(indice, 1);
-        }
     
+    methods: {
+        adicionaProduto(){
+            this.$emit('adicionaProduto', this.lista)
+        },
+        excluirProduto(indice) {
+            this.listas.splice(indice, 1);
+        },
+        limparLista() {
+            this.$emit('limparLista', this.listas)
+        }
     }
 
 }
