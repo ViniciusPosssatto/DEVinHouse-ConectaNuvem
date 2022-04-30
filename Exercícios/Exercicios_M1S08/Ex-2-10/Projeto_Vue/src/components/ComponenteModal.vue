@@ -24,14 +24,14 @@
                         </div>
                         <div class="form-group">
                             <label for="qtdade">Quantidade</label>
-                            <Field type="number" class="form-control" id="qtdade" name="qtdade" v-model="produtos.qtdade" placeholder="" :rules="validacao.validarCampos" />
+                            <Field type="number" class="form-control" id="qtdade" name="qtdade" v-model="produtos.qtdade" placeholder="" :rules="validacao.validarValor" />
                             <span class="error-message">
                                 <ErrorMessage name="qtdade" />
                             </span>
                         </div>
                         <div class="form-group">
                             <label for="valor">Valor</label>
-                            <Field type="number" class="form-control" id="valor" name="valor" v-model="produtos.valor" placeholder="R$" :rules="validacao.validarCampos" />
+                            <Field type="number" class="form-control" id="valor" name="valor" v-model="produtos.valor" placeholder="R$" :rules="validacao.validarValor" />
                             <span class="error-message">
                                 <ErrorMessage name="valor" />
                             </span>
@@ -41,7 +41,7 @@
                 </div> 
                 <!-- botões de ação --> 
                 <div class="modal-footer">
-                    <button type="submit" data-bs-dismiss="modal" @click="salvarProduto" :disabled="habilitarBtn" class="btn btn-success btn-add">Adicionar</button>
+                    <button type="submit" data-bs-dismiss="modal" @click="salvarProduto" :disabled="!habilitarBtn" class="btn btn-success btn-add">Adicionar</button>
                     <button class="btn btn-danger btn-add" data-bs-dismiss="modal">Cancelar</button>
                     
                 </div>
@@ -65,14 +65,14 @@ export default {
                 produtos: {
                     nome: null,
                     qtdade: null,
-                    valor: null
+                    valor: null,
                 },
                 validacao: null,
             }
         },
         computed: {
             habilitarBtn(){
-                return this.nome && this.qtdade && this.valor
+                return this.produtos.nome && this.produtos.qtdade && this.produtos.valor
             }
         },
         components:{

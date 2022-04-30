@@ -9,27 +9,30 @@
         <thead>
             <th>indice</th>
             <th>Nome</th>
-            <th>Qauntidade</th>
+            <th>Quantidade</th>
             <th>Valor</th>
             <th>Ações</th>
             
-        </thead> 
+        </thead>  <!-- Laço de repetição para cada item -->
             <tbody v-for="(item, indice) in listas" :key="indice">
                 <th>{{indice + 1}}</th>
                 <th>{{item.nome}}</th>
                 <th>{{item.qtdade}}</th>
                 <th> R$ {{item.valor}}</th>
                 <th>
-                    <!-- botões de ação para cada item -->
-                    <button class="btn-acao" type="button" @click="editar(indice)">Editar</button>
+                    <!-- botão de ação para cada item -->
                     <button class="btn-acao" type="button" @click="excluirProduto(indice)">Excluir</button>
                 </th>
             
             </tbody>
     </table>
-    <span v-else>Clique no botão para comçar sua lista!</span>
+    <div class="painel" v-else>
+        <span class="total">Clique no botão para começar sua lista!</span>
+    </div>
     
-</div>       
+    
+</div>
+ 
 </template>
 
 <script>
@@ -40,9 +43,13 @@ name: 'primeiroComponente',
             type: Array,
             require: true,
             default: null
+        }     
+    },
+    data(){
+        return {
+            total: 0
         }
     },
-    
     methods: {
         adicionaProduto(){
             this.$emit('adicionaProduto', this.lista)
@@ -52,7 +59,8 @@ name: 'primeiroComponente',
         },
         limparLista() {
             this.$emit('limparLista', this.listas)
-        }
+        },
+        
     }
 
 }
@@ -62,6 +70,7 @@ name: 'primeiroComponente',
 *{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 form{
     display: flex;
     flex-direction: column;
@@ -120,5 +129,12 @@ thead{
 <style>
 body{
     background-color: rgb(163, 165, 165);
+}
+.aviso-ini{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-content: center;
+    align-items: center;
 }
 </style>
