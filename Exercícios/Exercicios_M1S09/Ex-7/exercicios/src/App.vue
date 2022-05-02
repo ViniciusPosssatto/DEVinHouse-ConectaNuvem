@@ -4,9 +4,7 @@
       <MyHeader />
     </div>
      
-     <div style="border: 1px green;">
-        <input type="text" v-model="msg">
-    </div>
+     
    
   </div>
 </template>
