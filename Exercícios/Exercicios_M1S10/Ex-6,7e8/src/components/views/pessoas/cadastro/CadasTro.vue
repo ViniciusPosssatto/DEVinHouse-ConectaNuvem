@@ -35,8 +35,7 @@ defineRule("required", value => {
 });
 
 defineRule("data", value => {
-  let dataAgora = new Date()
-  if (value > dataAgora){
+  if (new Date(value) > new Date()){
     return "A data deve ser anterior a data atual!"
   }
     return true;
@@ -48,7 +47,7 @@ export default {
   data(){
     return{
       pessoa: {
-        id: new Date().getTime(),
+        id: Date.now(),
         nome: '',
         nascimento: ''
       },

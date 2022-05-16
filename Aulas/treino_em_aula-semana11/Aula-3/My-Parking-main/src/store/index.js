@@ -24,7 +24,7 @@ const userModule = {
             axios.get(`https://devinhouse-auth.herokuapp.com/api/v1/user/${id}`, {
                 authorization: token
             }) .then((response) => {
-                context.
+                console.log(response)
             }) .catch((err) => {
                 console.log(err)
             })
