@@ -86,7 +86,7 @@
         },
         methods: {
             save() {       
-              this.$store.commit('reservaModule/insert', this.reserva);
+              this.$store.dispatch('reservaModule/insert', this.reserva);
               this.reserva = {};
               document.getElementById('formReserva').reset();
               this.$toast.success('Reserva efetuada com sucesso!', {
@@ -95,6 +95,7 @@
             },
             clear() {
                 this.reserva = {};  
+                document.getElementById('formReserva').reset();
             }
         }
     }
