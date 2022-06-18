@@ -1,1 +1,6 @@
-"pessoa = { 'nome': '', 'sobrenome': '', 'idade': '', 'cidade': ''}"
+{ 
+    "nome": "", 
+    "sobrenome": "", 
+    "idade": "", 
+    "cidade": ""
+}
