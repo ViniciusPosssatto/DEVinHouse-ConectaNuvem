@@ -45,7 +45,8 @@ class Voo():
                 continue
             print(f'O código do voo é {self.codigo}, boa viagem!')
             print('-=' * 10)
-            opcao = str(input('Deseja fazer outra reserva [S/N]: ')).strip().upper()
+            while opcao not in 'SN':
+                opcao = str(input('Deseja fazer outra reserva [S/N]: ')).strip().upper()
 
     def reserva_25desconto(self):
         valor = self.passagem - self.passagem * 0.25
@@ -65,15 +66,15 @@ class Voo():
 primeiro_voo = Voo(4356, 'algum lugar', 'Outro lugar', 45, 456, 'wer233')
 
 primeiro_voo.reserva_de_voo()
-
 total = (primeiro_voo.reserva25 * primeiro_voo.reserva_25desconto()) + (primeiro_voo.reserva15 * primeiro_voo.reserva_15desconto()) + (primeiro_voo.reserva5 * primeiro_voo.reserva_5desconto()) + (primeiro_voo.reservainteira * primeiro_voo.passagem)
 
 print(f'''
     Foram vendidas {primeiro_voo.reserva25} passagens de 1ª classe, 
     {primeiro_voo.reserva15} passagens de 2ª classe e 
     {primeiro_voo.reserva5} passagens de 3ª classe. 
-    Aidna foram vendidas mais {primeiro_voo.reservainteira} passagens com valor sem descontos. 
+    Ainda foram vendidas mais {primeiro_voo.reservainteira} passagens com valor sem descontos. 
     Totalizando {primeiro_voo.reserva25 + primeiro_voo.reserva15 + primeiro_voo.reserva5 + primeiro_voo.reservainteira} passagens.
     Os assentos ocupados neste voo, foram: {sorted(primeiro_voo.ocupados)}.
     Foi arrecadado um total de R$ {total:.2f} para esta viagem.
+    Por fim, sobraram {primeiro_voo.assentos_totais} assentos.
     ''')
