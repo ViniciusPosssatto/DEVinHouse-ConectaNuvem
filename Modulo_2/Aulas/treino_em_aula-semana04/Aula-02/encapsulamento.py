@@ -10,7 +10,7 @@ class Conta:
     def saldoemConta(self):
         return self.__saldo
 
-    @saldoemConta.setter  #somente após o setter que foi possivel alterar o valor do saldo - pq ele é encapsulado
+    @saldoemConta.setter
     def saldo(self):
         raise ValueError('Impossivel alterar saldo diretamente. Use a função depositar ou sacar.')
 

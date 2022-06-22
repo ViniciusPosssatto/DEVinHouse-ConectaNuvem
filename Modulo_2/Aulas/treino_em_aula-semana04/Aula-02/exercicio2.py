@@ -74,7 +74,7 @@ print(viagem1.poltrona)
 '''
 while True:
     novo = int(input(
-'''
+
 '''
         Digite a seguir sua escolha:
         [1] Comprar passagem
@@ -82,7 +82,7 @@ while True:
         [3] Alterar poltrona
         [4] Sair \n
 '''
-'''
+
     ))
     if novo == 1:
         valor = float(input(('Valor da passagem: R$')))
@@ -102,5 +102,3 @@ while True:
 
     if novo == 4:
         break
-
-'''
