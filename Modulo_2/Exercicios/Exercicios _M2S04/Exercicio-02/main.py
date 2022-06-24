@@ -8,6 +8,8 @@ class ContaBancaria:
         self.anoNasc = anoNascimento
         self.anoAtual = date.today().year
         self.idade = self.idade_atual()
+        self.saldo = 0
+        self.limiteSaque = 500
 
     def idade_atual(self):
         idade = self.anoAtual - self.anoNasc
@@ -21,7 +23,7 @@ class ContaBancaria:
         return self.__cpf
 
 
-pessoa = ContaBancaria('Vini', 4023940234, 1994)
+pessoa = ContaBancaria('Vini', 402394023, 1994)
 print(pessoa.idade)
-print(pessoa.)
-pessoa_menor = ContaBancaria('Cau', 23423566, 2006)
+print(pessoa.cpf)
+pessoa_menor = ContaBancaria('Cau', 234235660, 2006)
