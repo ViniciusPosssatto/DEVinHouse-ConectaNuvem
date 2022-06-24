@@ -72,13 +72,15 @@ while True:
         nome = str(input('Digite seu nome: ')).strip().lower()
         while assento not in range(1, 47):
             assento = int(input('Qual assento deseja: '))
+
         passageiro = Passageiro(nome, assento)
         passageiro.comprar_passagem()
 
     if opcao == 2:
         while assento not in range(1, 47):
             assento = int(input('Qual assento comprou: '))
-        Viagem.cancelar_compra(Passageiro, assento)
+        #Viagem.cancelar_compra(Passageiro, assento)
+        super(Passageiro, passageiro).cancelar_compra(assento)
 
     if opcao == 3:
         nome = str(input('Digite seu nome: ')).strip().lower()
@@ -88,6 +90,9 @@ while True:
 
     if opcao == 5:
         print(ocupados)
+
+    if opcao == 6:
+        print(passageiro.assento)
 
     if opcao == 4:
         break

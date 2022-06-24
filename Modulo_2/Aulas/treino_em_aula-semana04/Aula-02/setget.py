@@ -15,6 +15,6 @@ class Cliente:
 
 
 c = Cliente('Vini', 'Possatto')
-#.sobrenome = 'j,nm,,gjhgj'
+c.sobrenome = 'j,nm,,gjhgj'
 
 print(f'{c.nome_completo}')
