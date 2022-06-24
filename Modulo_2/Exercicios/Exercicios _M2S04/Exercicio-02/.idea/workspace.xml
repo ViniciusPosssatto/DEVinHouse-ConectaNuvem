@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c948b6bd-c5b4-49a8-8888-635e68bfb1a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana04/Aula-03/tamagochi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exercicio-01/conta_bancaria.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana04/Aula-02/ex2_teste.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana04/Aula-02/ex2_teste.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana04/Aula-02/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana04/Aula-02/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana04/Aula-02/setget.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana04/Aula-02/setget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Exercicio-03" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
