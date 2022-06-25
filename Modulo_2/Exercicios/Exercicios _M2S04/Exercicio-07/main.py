@@ -97,7 +97,6 @@ class ContaBancaria(Banco):
                 if resp == 'S':
                     self.saldo -= valor
                     print(f'Você enviou R$ {valor} para {destino[0]}.')
-                    pessoa_2.deposito(valor)
                 else:
                     print('Transferência cancelada.')
             else:
@@ -107,20 +106,48 @@ class ContaBancaria(Banco):
 
 
 pessoa = ContaBancaria('Vini', 402394023, 1994)
-print(pessoa.idade)
-print(pessoa.cpf)
 pessoa.criaçãoDeConta()
-pessoa.deposito(5000)
-pessoa.saque(560)
-print(pessoa.extrato())
-print(pessoa.dados[0])
 
 pessoa_2 = ContaBancaria('Aruã', 983049234, 1999)
 pessoa_2.criaçãoDeConta()
 
-pessoa.transferencia(pessoa_2.dados, 50)
-
-print(f'A pessoa2 está com R${pessoa_2.extrato()} em conta.')
-pessoa.transferencia(pessoa_2.dados, 50)
-print(f'A pessoa2 está com R${pessoa_2.extrato()} em conta.')
 pessoa_menor = ContaBancaria('Cau', 234235660, 2006)
+
+
+while True:
+    print(
+
+'''
+        Digite a seguir sua escolha:
+        [1] Dados da pessoa
+        [2] Realizar saque
+        [3] Realizar depósito
+        [4] Realizar transferência
+        [5] Extrato da conta
+        [0] Sair \n
+'''
+
+    )
+    novo = int(input('Digite sua opcao: '))
+    print('=-=-=-=-=-=-=')
+    if novo == 1:
+        print(f'O nome da pessoa é {pessoa.nome} e possui {pessoa.idade} anos.')
+
+    if novo == 2:
+        valor = float(input('Digite o valor a ser sacado: R$ '))
+        pessoa.saque(valor)
+
+    if novo == 3:
+        valor = float(input('Digite o valor a ser depositado: R$ '))
+        pessoa.deposito(valor)
+
+    if novo == 4:
+        valor = float(input('Digite o valor a ser transferido: R$ '))
+        pessoa.transferencia(pessoa_2.dados, valor)
+
+    if novo == 5:
+        print(f'Seu saldo é de R$ {pessoa.extrato()}.')
+
+    if novo == 0:
+        break
+print('Você saiu do sistema...')
