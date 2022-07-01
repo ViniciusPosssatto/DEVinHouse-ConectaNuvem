@@ -3,24 +3,6 @@ from os.path import dirname, relpath, isfile
 from json import dump, load
 
 
-class Pessoa:
-
-    def __init__(self):
-        self.nome = None
-        self.celular = None
-        self.email = None
-
-    def cadastrar_pessoa(self):
-        pass
-
-    def exibir_pessoa(self):
-        pass
-
-    @staticmethod
-    def salvar_pessoa():
-        pass
-
-
 class Endereco:
 
     def __init__(self):

@@ -2,74 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c99d5ee-a1d5-4950-8b89-680dd24002a9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S02/Exercicio-01-03/Captura de tela 2022-06-11 085513.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S02/Exercicio-01-03/Captura de tela 2022-06-11 085910.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S02/Exercicio-04/maiornumero.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S02/Exercicio-05/identificarletras.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S02/Exercicio-06/funcaoMatematica.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S02/Exercicio-07/Math.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S02/Exercicio-07/funcaoMatematica.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S03/Exercicio-01/concatenar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S03/Exercicio-02/treino_ex2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S03/Exercicio-03/strings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S03/Exercicio-04/formatação.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S03/Exercicio-05/list_comprehensions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S03/Exercicio-06/dict.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S03/Exercicio-07/arquive_json.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S03/Exercicio-07/cadastro.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S03/Exercicio-07/data/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S03/Exercicio-08/criando_json.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S03/Exercicio-08/data/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S03/Exercicio-09/viajens_py.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S03/Exercicio-10/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S03/Exercicio-10/viajens_py.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-01/conta_bancaria.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-02/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-02/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-03/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-03/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-04/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-04/.idea/Exercicio-04.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-04/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-04/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-04/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-04/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-04/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-04/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-05/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-05/.idea/Exercicio-04.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-05/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-05/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-05/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-05/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-05/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-05/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-06/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-06/.idea/Exercicio-06.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-06/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-06/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-06/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-06/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-06/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-06/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07 - modificado/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07 - modificado/.idea/Exercicio-06.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07 - modificado/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07 - modificado/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07 - modificado/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07 - modificado/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07 - modificado/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07 - modificado/class_banco.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07 - modificado/class_conta.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07 - modificado/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07/.idea/Exercicio-06.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Exercicios _M2S04/Exercicio-07/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +25,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Exercicio-02" />
   </component>
   <component name="RunManager" selected="Python.main (1)">
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
