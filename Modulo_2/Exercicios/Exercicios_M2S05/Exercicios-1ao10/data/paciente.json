@@ -1,0 +1,22 @@
+{
+  "pacientes": [
+    {
+      "nome": "vineh",
+      "telefone": 23423432,
+      "rg": 11111,
+      "cpf": "3333333",
+      "email": "vineh@email.com",
+      "convenio": true,
+      "data_nasc": "22/234/23432"
+    },
+    {
+      "nome": "vineh",
+      "telefone": 23423432,
+      "rg": 11111,
+      "cpf": "3333333",
+      "email": "vineh@email.com",
+      "convenio": true,
+      "data_nasc": "22/234/23432"
+    }
+  ]
+}

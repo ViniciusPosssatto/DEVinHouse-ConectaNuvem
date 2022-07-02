@@ -2,6 +2,8 @@ import requests
 from os.path import dirname, relpath, isfile
 from json import dump, load
 
+from core.config.settings import Settings
+
 
 class Endereco:
 
@@ -13,7 +15,7 @@ class Endereco:
         self.cidade: str = None
         self.uf: str = None
         self.enderecos = []
-        self.root_path = dirname(relpath(__file__))
+        self.endereco_path = Settings().DATA_ENDERECO_PATH
 
     def cadastrar_endereco(self, cep):
         print('Cadastrar endereço?')
@@ -36,7 +38,7 @@ class Endereco:
                             del end['ibge']
                             self.enderecos.append(end)
                             print(self.enderecos)
-                            Endereco.salvar_endereco(self.root_path, self.enderecos)
+                            Endereco.salvar_endereco(self.endereco_path, self.enderecos)
                             break
                         if opc == 'N':
                             self.cidade = input('Digite sua cidade: ').capitalize()
@@ -53,7 +55,7 @@ class Endereco:
                                                    'uf': self.uf,
                                                    'numero': self.numero})
                             print(self.enderecos)
-                            Endereco.salvar_endereco(self.root_path, self.enderecos)
+                            Endereco.salvar_endereco(self.endereco_path, self.enderecos)
                             break
                 except Exception as exception:
                     print(f'Deu erro = {exception}')
@@ -62,12 +64,12 @@ class Endereco:
 
     def exibir_endereco(self):
         try:
-            path_enderecos = self.root_path + 'data/enderecos.json'
-            if isfile(path_enderecos):
-                with open(path_enderecos, 'r+') as f:
-                    data = load(f)
-                    print(f"Endereço: {data[0]['localidade']}/{data[0]['uf']}, {data[0]['logradouro']} - "
-                          f"bairro {data[0]['bairro']}, número {data[0]['numero']}.")
+            if isfile(self.endereco_path):
+                with open(self.endereco_path, 'r+') as f:
+                    datas = load(f)
+                    for data in datas:
+                        print(f"Endereço: {data['localidade']}/{data['uf']}, {data['logradouro']} - "
+                              f"bairro {data['bairro']}, número {data['numero']}.")
             else:
                 print('Arquivo não existe.')
                 cep = int(input('Informe o seu CEP: '))
@@ -78,9 +80,9 @@ class Endereco:
 
     @staticmethod
     def salvar_endereco(filepath, endereco):
-
+        print(filepath)
         try:
-            path_enderecos = filepath + 'data/enderecos.json'
+            path_enderecos = filepath
             if not isfile(path_enderecos):
                 with open(path_enderecos, 'w', encoding="utf-8") as f:
                     dump(endereco, f, indent=2, separators=(',', ': '))
@@ -90,9 +92,4 @@ class Endereco:
                 print('Arquivo já existe')
         except Exception as exception:
             print(f'Deu erro = {exception}')
-
-
-if __name__ == "__main__":
-    endereco_ = Endereco()
-    endereco_.exibir_endereco()
 

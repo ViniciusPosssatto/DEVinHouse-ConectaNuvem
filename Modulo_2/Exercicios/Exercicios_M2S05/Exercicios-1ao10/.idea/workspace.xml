@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7edbe80c-f243-4f59-a6f7-e47d3c080c26" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cls_pessoa.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex-01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex-01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/enderecos.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/cls_endereco.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/Ex-01.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/Exercicio-02.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercicio-02/cls_endereco.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercicio-02/cls_pessoa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercicio-02/data/enderecos.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercicio-02/data/pessoas.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +34,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2BMHkeC36Vhd3V2PQCHEUQgF1Vu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,12 +49,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Vineh\Desktop\DevInHouse-GitHub\DEVinHouse-ConectaNuvem\Modulo_2\Exercicios\Exercicios_M2S05\Exercicio-02\entily\pessoas" />
+      <recent name="C:\Users\Vineh\Desktop\DevInHouse-GitHub\DEVinHouse-ConectaNuvem\Modulo_2\Exercicios\Exercicios_M2S05\Exercicio-02\entily\endereco" />
       <recent name="C:\Users\Vineh\Desktop\DevInHouse-GitHub\DEVinHouse-ConectaNuvem\Modulo_2\Exercicios\Exercicios_M2S05\Exercicio-02\utils" />
       <recent name="C:\Users\Vineh\Desktop\DevInHouse-GitHub\DEVinHouse-ConectaNuvem\Modulo_2\Exercicios\Exercicios_M2S05\Exercicio-02" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.cls_pessoa (1)">
-    <configuration name="cls_endereco (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.__init__ (1)">
+    <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Exercicio-02" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -52,11 +64,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/entily" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/cls_endereco.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/entily/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -73,32 +85,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/entily/endereco" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cls_endereco.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="cls_endereco" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Exercicio-02" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Vineh\Desktop\DevInHouse-GitHub\DEVinHouse-ConectaNuvem\Modulo_2\Exercicios\Exercicios_M2S05\Exercicio-02\utils\cls_endereco.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/entily/endereco/cls_endereco.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -120,6 +111,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="C:\Users\Vineh\Desktop\DevInHouse-GitHub\DEVinHouse-ConectaNuvem\Modulo_2\Exercicios\Exercicios_M2S05\Exercicio-02\utils\cls_endereco.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cls_paciente" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Exercicio-02" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/entily/pessoas" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/entily/pessoas/cls_paciente.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -136,11 +148,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/entily/pessoas" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cls_pessoa.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/entily/pessoas/cls_pessoa.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -149,7 +161,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cls_pessoa" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Exercicio-02" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -157,11 +169,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/core/config" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Vineh\Desktop\DevInHouse-GitHub\DEVinHouse-ConectaNuvem\Modulo_2\Exercicios\Exercicios_M2S05\Exercicio-02\cls_pessoa.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/config/settings.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -172,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.cls_pessoa (1)" />
         <item itemvalue="Python.cls_endereco (2)" />
-        <item itemvalue="Python.cls_endereco (1)" />
-        <item itemvalue="Python.cls_endereco (1)" />
-        <item itemvalue="Python.cls_pessoa" />
+        <item itemvalue="Python.settings" />
+        <item itemvalue="Python.cls_paciente" />
       </list>
     </recent_temporary>
   </component>

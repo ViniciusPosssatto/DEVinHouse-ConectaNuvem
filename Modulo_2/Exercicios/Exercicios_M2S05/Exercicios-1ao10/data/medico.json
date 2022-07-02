@@ -1,0 +1,18 @@
+{
+  "medicos": [
+    {
+      "nome": "clau",
+      "telefone": 234324,
+      "email": "aas@sas.com",
+      "telefone2": 234234,
+      "CRM": 234234
+    },
+    {
+      "nome": "clau",
+      "telefone": 234324,
+      "email": "aas@sas.com",
+      "telefone2": 234234,
+      "CRM": 234234
+    }
+  ]
+}
