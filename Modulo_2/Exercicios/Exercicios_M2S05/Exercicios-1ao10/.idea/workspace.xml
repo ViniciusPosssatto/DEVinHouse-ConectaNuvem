@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7edbe80c-f243-4f59-a6f7-e47d3c080c26" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/Ex-01.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/Exercicio-02.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio-02/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio-02/cls_endereco.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio-02/cls_pessoa.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio-02/data/enderecos.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio-02/data/pessoas.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/agenda.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/agenda.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/medico.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/paciente.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entily/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/entily/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entily/agenda/cls_agenda.py" beforeDir="false" afterPath="$PROJECT_DIR$/entily/agenda/cls_agenda.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entily/endereco/cls_endereco.py" beforeDir="false" afterPath="$PROJECT_DIR$/entily/endereco/cls_endereco.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entily/pessoas/cls_medico.py" beforeDir="false" afterPath="$PROJECT_DIR$/entily/pessoas/cls_medico.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entily/pessoas/cls_paciente.py" beforeDir="false" afterPath="$PROJECT_DIR$/entily/pessoas/cls_paciente.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,8 +182,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.__init__ (1)" />
-        <item itemvalue="Python.cls_pessoa (1)" />
         <item itemvalue="Python.cls_endereco (2)" />
+        <item itemvalue="Python.cls_pessoa (1)" />
         <item itemvalue="Python.settings" />
         <item itemvalue="Python.cls_paciente" />
       </list>

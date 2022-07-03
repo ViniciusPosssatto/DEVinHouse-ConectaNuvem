@@ -1,7 +1,7 @@
 import requests
-from os.path import dirname, relpath, isfile
+from os.path import isfile
 from json import dump, load
-
+from time import sleep
 from core.config.settings import Settings
 
 
@@ -39,6 +39,8 @@ class Endereco:
                             self.enderecos.append(end)
                             print(self.enderecos)
                             Endereco.salvar_endereco(self.endereco_path, self.enderecos)
+                            print('Cadastro de endereço efetuado...')
+                            sleep(1)
                             break
                         if opc == 'N':
                             self.cidade = input('Digite sua cidade: ').capitalize()
@@ -54,42 +56,45 @@ class Endereco:
                                                    'localidade': self.cidade,
                                                    'uf': self.uf,
                                                    'numero': self.numero})
-                            print(self.enderecos)
                             Endereco.salvar_endereco(self.endereco_path, self.enderecos)
+                            print('Cadastro de endereço efetuado...')
+                            sleep(1)
                             break
                 except Exception as exception:
-                    print(f'Deu erro = {exception}')
+                    print(f'Erro cadastro endereço = {exception}')
+
             if opc1 == 'N':
+                print('Cadastro de endereço cancelado...')
+                sleep(1)
                 break
 
     def exibir_endereco(self):
         try:
-            if isfile(self.endereco_path):
-                with open(self.endereco_path, 'r+') as f:
-                    datas = load(f)
-                    for data in datas:
-                        print(f"Endereço: {data['localidade']}/{data['uf']}, {data['logradouro']} - "
-                              f"bairro {data['bairro']}, número {data['numero']}.")
-            else:
-                print('Arquivo não existe.')
-                cep = int(input('Informe o seu CEP: '))
-                self.cadastrar_endereco(cep)
+            with open(self.endereco_path, 'r+') as f:
+                datas = load(f)
+                for data in datas:
+                    print(f"Endereço: {data['localidade']}/{data['uf']}, {data['logradouro']} - "
+                          f"bairro {data['bairro']}, número {data['numero']}.")
 
+        except FileNotFoundError as error:
+            print('Arquivo não existe.')
+            cep = int(input('Informe o seu CEP: '))
+            self.cadastrar_endereco(cep)
         except Exception as error:
-            print(f'Deu erro = {error}')
+            print(f'Erro exibir endereço = {error}')
 
     @staticmethod
     def salvar_endereco(filepath, endereco):
-        print(filepath)
         try:
             path_enderecos = filepath
             if not isfile(path_enderecos):
-                with open(path_enderecos, 'w', encoding="utf-8") as f:
-                    dump(endereco, f, indent=2, separators=(',', ': '))
-            else:
                 with open(path_enderecos, 'w') as f:
                     dump(endereco, f, indent=2, separators=(',', ': '))
-                print('Arquivo já existe')
+            else:
+                with open(path_enderecos, 'r+') as f:
+                    dados = load(f)
+                    dados.append(endereco[0])
+                with open(path_enderecos, 'w') as f:
+                    dump(dados, f, indent=2, separators=(',', ': '))
         except Exception as exception:
-            print(f'Deu erro = {exception}')
-
+            print(f'Erro save endereço = {exception}')

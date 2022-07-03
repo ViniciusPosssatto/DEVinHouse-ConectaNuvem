@@ -1,23 +1,39 @@
 from os.path import isfile
 from json import dump, load
-
+from time import sleep
 from entily.pessoas import Pessoa
 
 
 class Medico(Pessoa):
 
-    def __init__(self, nome: str, email, tel: int, tel_sec: int, crm: int):
-        self.tel_secundario = tel_sec
-        self.crm = crm
-        self.__chaves = ["nome", "telefone", "email", "telefone2", "CRM"]
+    def __init__(self, nome: str, email, tel: int, cep: int):
+        self.tel_secundario = None
+        self.crm = None
+        self.cep = cep
+        self.endereco = None
+        self.__chaves = ["nome", "telefone", "email", "telefone2", "CRM", "CEP"]
         super().__init__(nome, email, tel)
 
-    def cadastrar_medico(self):
-        lista_dados = [self.nome, self.email, self.celular, self.tel_secundario, self.crm]
-
-        data = dict(zip(self.__chaves, lista_dados))
-        self.pessoas_m["medicos"].append(data)
-        self.salvar_medico(self.pessoas_m)
+    def cadastrar_medico(self, nome):
+        print(f'Cadastrar paciente {nome}?')
+        opc = ' '
+        while opc not in 'SN':
+            opc = input('Digite [Sim] ou [Não] = ').strip().upper()[0]
+            if opc == 'S':
+                print('Cadastro de paciente:')
+                self.tel_secundario = int(input('Digite um segundo telefone para contato: '))
+                self.crm = int(input('Digite o CRM do médico: '))
+                lista_dados = [self.nome, self.email, self.celular, self.tel_secundario, self.crm, self.cep]
+                data = dict(zip(self.__chaves, lista_dados))
+                self.pessoas_m["medicos"].append(data)
+                self.salvar_medico(self.pessoas_m)
+                print('Cadastro de médico efetuado...')
+                sleep(1)
+                break
+            if opc == 'N':
+                print('Cancelando cadastro de médico...')
+                sleep(1)
+                break
 
     def exibir_pessoa(self):
         try:
