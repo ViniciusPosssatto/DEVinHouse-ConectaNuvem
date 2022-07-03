@@ -17,6 +17,7 @@ if __name__ == "__main__":
                     [1] Cadastrar Médico
                     [2] Cadastrar Paciente
                     [3] Cadastrar Agenda
+                    [4] Exibir endereços cadastrados
                     [0] Sair \n
             '''
 
@@ -69,6 +70,7 @@ if __name__ == "__main__":
             hora = input('Qual o horário marcado [ hh:mm ]: ')
             obs = input('Observações da consulta: ')
             agenda = Agenda(crm, cpf, dia, mes, ano, hora, obs)
+            agenda.cadastrar_agenda()
             opc = ' '
             while opc not in 'SN':
                 print('Mostrar lista de consultas?')
@@ -78,6 +80,9 @@ if __name__ == "__main__":
                     break
                 if opc == 'N':
                     break
+        if opc1 == 4:
+            Endereco().exibir_endereco()
+
         if opc1 == 0:
             break
 

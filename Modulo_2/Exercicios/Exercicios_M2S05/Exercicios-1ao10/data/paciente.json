@@ -1,22 +1,14 @@
 {
   "pacientes": [
     {
-      "nome": "vinhe",
-      "telefone": 88776644,
-      "rg": 992883445,
-      "cpf": 1231231231,
-      "email": "vineh@email.csm",
+      "nome": "Vineh",
+      "telefone": 3551178,
+      "rg": 1010101010,
+      "cpf": 2020202022,
+      "email": "vineh@gmail.com",
       "convenio": "sim",
-      "data_nasc": "13/54/8787"
-    },
-    {
-      "nome": "Cuzcuz",
-      "telefone": 111111,
-      "rg": 22222222,
-      "cpf": 4444444,
-      "email": "aaaaa@gmail.com",
-      "convenio": "nao",
-      "data_nasc": "19/12/1222"
+      "data_nasc": "12/12/1990",
+      "CEP": 88080300
     }
   ]
 }

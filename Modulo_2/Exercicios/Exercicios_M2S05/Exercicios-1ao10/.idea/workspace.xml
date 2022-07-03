@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7edbe80c-f243-4f59-a6f7-e47d3c080c26" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/agenda.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/agenda.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/agenda.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/enderecos.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/medico.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/paciente.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/entily/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/entily/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entily/agenda/cls_agenda.py" beforeDir="false" afterPath="$PROJECT_DIR$/entily/agenda/cls_agenda.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entily/endereco/cls_endereco.py" beforeDir="false" afterPath="$PROJECT_DIR$/entily/endereco/cls_endereco.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entily/pessoas/cls_medico.py" beforeDir="false" afterPath="$PROJECT_DIR$/entily/pessoas/cls_medico.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entily/pessoas/cls_paciente.py" beforeDir="false" afterPath="$PROJECT_DIR$/entily/pessoas/cls_paciente.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
