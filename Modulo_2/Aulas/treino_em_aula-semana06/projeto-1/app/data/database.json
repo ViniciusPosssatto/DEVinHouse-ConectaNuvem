@@ -1,0 +1,68 @@
+{
+  "motosTriciclos": [
+    {
+      "potencia": 123,
+      "rodas": 2,
+      "chassi": "2ced98a4",
+      "data-fabrica\u00e7\u00e3o": "12/12/2010",
+      "modelo": "falcon",
+      "placa": null,
+      "valor": 12045.98,
+      "cpf": 0,
+      "cor": "prata"
+    },
+    {
+      "potencia": 125,
+      "rodas": 2,
+      "chassi": "f4ea8db6",
+      "data-fabrica\u00e7\u00e3o": "15/12/2002",
+      "modelo": "cg titan",
+      "placa": null,
+      "valor": 6890.99,
+      "cpf": 0,
+      "cor": "preta"
+    }
+  ],
+  "carros": [
+    {
+      "potencia": 99,
+      "portas": 4,
+      "combustivel": "gasolina",
+      "chassi": "d81e0406",
+      "data-fabrica\u00e7\u00e3o": "12/12/2005",
+      "modelo": "wolkswagem",
+      "placa": null,
+      "valor": 3000.9,
+      "cpf": 0,
+      "cor": "prata"
+    },
+    {
+      "potencia": 400,
+      "portas": 6,
+      "combustivel": "flex",
+      "chassi": "4afa4db6",
+      "data-fabrica\u00e7\u00e3o": "30/04/2022",
+      "modelo": "chevrolet",
+      "placa": null,
+      "valor": 300560.98,
+      "cpf": 0,
+      "cor": "preta"
+    }
+  ],
+  "camionetes": [
+    {
+      "potencia": 450,
+      "portas": 4,
+      "cacamba": 400,
+      "combustivel": "diesel",
+      "chassi": "7324a894",
+      "data-fabrica\u00e7\u00e3o": "30/04/2021",
+      "modelo": "wolks",
+      "placa": null,
+      "valor": 456000.98,
+      "cpf": 0,
+      "cor": "roxa"
+    }
+  ],
+  "historico_vendas": []
+}

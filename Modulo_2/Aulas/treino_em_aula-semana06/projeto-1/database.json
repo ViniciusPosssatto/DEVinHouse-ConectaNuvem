@@ -1,0 +1,121 @@
+{
+  "motosTriciclos": [
+    {
+      "potencia": 234,
+      "rodas": 2,
+      "chassi": "3f676bc8",
+      "data-fabrica\u00e7\u00e3o": "23/12/2020",
+      "modelo": "yamaha",
+      "placa": "QWE4t56",
+      "valor": 234566.0,
+      "cpf": 0,
+      "cor": "prata"
+    },
+    {
+      "potencia": 400,
+      "rodas": 2,
+      "chassi": "046ee6d4",
+      "data-fabrica\u00e7\u00e3o": "12/04/2010",
+      "modelo": "falcon",
+      "placa": "GFG4G56",
+      "valor": 12500.0,
+      "cpf": 0,
+      "cor": "preto"
+    }
+  ],
+  "carros": [
+    {
+      "potencia": 97,
+      "portas": 4,
+      "combustivel": "gasolina",
+      "chassi": "fc7c5c63",
+      "data-fabrica\u00e7\u00e3o": "05/10/2020",
+      "modelo": "gol",
+      "placa": "ARD4R98",
+      "valor": 50300,
+      "cpf": 0,
+      "cor": "vermelho"
+    }
+  ],
+  "camionetes": [
+    {
+      "potencia": 355,
+      "portas": 2,
+      "cacamba": 450,
+      "combustivel": "gasolina",
+      "chassi": "0fa86bdb",
+      "data-fabrica\u00e7\u00e3o": "12/11/2020",
+      "modelo": "s10 simples",
+      "placa": "DRE3R44",
+      "valor": 110300,
+      "cpf": 0,
+      "cor": "roxa"
+    },
+    {
+      "potencia": 400,
+      "portas": 4,
+      "cacamba": 344,
+      "combustivel": "diesel",
+      "chassi": "682888d7",
+      "data-fabrica\u00e7\u00e3o": "10/09/2021",
+      "modelo": "hilux",
+      "placa": "DRT9R45",
+      "valor": 130300,
+      "cpf": 0,
+      "cor": "roxa"
+    }
+  ],
+  "historico_vendas": [
+    {
+      "infos veiculo": {
+        "potencia": 250,
+        "rodas": 2,
+        "chassi": "a67d6h5k",
+        "data-fabrica\u00e7\u00e3o": "10/11/2010",
+        "modelo": "twister",
+        "placa": "DOP4R56",
+        "valor": 20300,
+        "cpf": 31231574234,
+        "cor": "preta"
+      },
+      "valor de venda": 23455,
+      "data da venda": "06/07/2022",
+      "tipo": "moto"
+    },
+    {
+      "infos veiculo": {
+        "potencia": 332,
+        "portas": 6,
+        "cacamba": 200,
+        "combustivel": "diesel",
+        "chassi": "8ydf4n99",
+        "data-fabrica\u00e7\u00e3o": "13/01/2020",
+        "modelo": "furg\u00c3\u00a3o",
+        "placa": "ASD2E23",
+        "valor": 70300,
+        "cpf": 0,
+        "cor": "roxa"
+      },
+      "valor de venda": 85677,
+      "data da venda": "04/03/2021",
+      "tipo": "camionete"
+    },
+    {
+      "infos veiculo": {
+        "potencia": 124,
+        "rodas": 2,
+        "chassi": "a8f1c276",
+        "data-fabrica\u00e7\u00e3o": "12/01/2012",
+        "modelo": "honda cd tita",
+        "placa": "ASD4S34",
+        "valor": 12000.0,
+        "cpf": 78978978978,
+        "cor": "branco"
+      },
+      "cpf": 78978978978,
+      "valor de venda": 1234455.0,
+      "data da venda": "10/07/2022",
+      "tipo": "moto"
+    }
+  ]
+}
