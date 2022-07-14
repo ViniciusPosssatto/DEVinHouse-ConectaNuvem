@@ -11,7 +11,6 @@ class Menu:
         """OBS: utilizei conceito de composição aqui"""
         self.validar = ValidarInputs()
         self.options = MenuOptions()
-        self.retorna_infos = RetornaInfos()
 
     def start(self):
         while True:
@@ -103,11 +102,11 @@ class Menu:
                             click = input('\nPessione uma tecla para sair...')
                             self.validar.cls()
                         if sub_option == 4:
-                            self.retorna_infos.retorna_todos_disponiveis()
+                            RetornaInfos().retorna_todos_disponiveis()
                             click = input('\nPessione uma tecla para sair...')
                             self.validar.cls()
                         if sub_option == 5:
-                            self.retorna_infos.retorna_todos_veiculos()
+                            RetornaInfos().retorna_todos_veiculos()
                         if sub_option == 0:
                             self.validar.cls()
                             break
@@ -167,19 +166,19 @@ class Menu:
                                 sub_option = self.validar.validar_options('b')
                                 self.validar.cls()
                                 if sub_option == 1:
-                                    self.retorna_infos.retorna_todas_vendas()
+                                    RetornaInfos().retorna_todas_vendas()
                                     click = input('\n\nPessione uma tecla para sair...')
                                     self.validar.cls()
                                 if sub_option == 2:
-                                    self.retorna_infos.retorna_vendido_maior_valor()
+                                    RetornaInfos().retorna_vendido_maior_valor()
                                     click = input('\n\nPessione uma tecla para sair...')
                                     self.validar.cls()
                                 if sub_option == 3:
-                                    self.retorna_infos.retorna_vendido_menor_valor()
+                                    RetornaInfos().retorna_vendido_menor_valor()
                                     click = input('\n\nPessione uma tecla para sair...')
                                     self.validar.cls()
                                 if sub_option == 4:
-                                    self.retorna_infos.retorna_resultado()
+                                    RetornaInfos().retorna_resultado()
                                     click = input('\n\nPessione uma tecla para sair...')
                                     self.validar.cls()
                                 if sub_option == 0:
@@ -193,19 +192,19 @@ class Menu:
                                 sub_option = self.validar.validar_options('b')
                                 self.validar.cls()
                                 if sub_option == 1:
-                                    self.retorna_infos.retorna_todos_disponiveis()
+                                    RetornaInfos().retorna_todos_disponiveis()
                                     click = input('\n\nPessione uma tecla para sair...')
                                     self.validar.cls()
                                 if sub_option == 2:
-                                    self.retorna_infos.retorna_veiculos_por_tipo('moto')
+                                    RetornaInfos().retorna_veiculos_por_tipo('moto')
                                     click = input('\n\nPessione uma tecla para sair...')
                                     self.validar.cls()
                                 if sub_option == 3:
-                                    self.retorna_infos.retorna_veiculos_por_tipo('carro')
+                                    RetornaInfos().retorna_veiculos_por_tipo('carro')
                                     click = input('\n\nPessione uma tecla para sair...')
                                     self.validar.cls()
                                 if sub_option == 4:
-                                    self.retorna_infos.retorna_veiculos_por_tipo('camionete')
+                                    RetornaInfos().retorna_veiculos_por_tipo('camionete')
                                     click = input('\n\nPessione uma tecla para sair...')
                                     self.validar.cls()
                                 if sub_option == 0:

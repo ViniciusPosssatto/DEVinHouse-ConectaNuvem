@@ -21,6 +21,28 @@
       "valor": 6890.99,
       "cpf": 0,
       "cor": "preta"
+    },
+    {
+      "potencia": 342,
+      "rodas": 3,
+      "chassi": "c5c472ec",
+      "data-fabrica\u00e7\u00e3o": "31/03/2021",
+      "modelo": "vcxxxxx",
+      "placa": "QWE3E34",
+      "valor": 12355555.0,
+      "cpf": 0,
+      "cor": "prata"
+    },
+    {
+      "potencia": 234,
+      "rodas": 3,
+      "chassi": "0918d710",
+      "data-fabrica\u00e7\u00e3o": "12/12/2012",
+      "modelo": "cccccccc",
+      "placa": "QWE2W22",
+      "valor": 123455.0,
+      "cpf": 0,
+      "cor": "alguma coias"
     }
   ],
   "carros": [
@@ -47,6 +69,18 @@
       "valor": 300560.98,
       "cpf": 0,
       "cor": "preta"
+    },
+    {
+      "potencia": 2423423423,
+      "portas": 6,
+      "combustivel": "flex",
+      "chassi": "60c0f4c0",
+      "data-fabrica\u00e7\u00e3o": "12/12/2012",
+      "modelo": "xxxxxxx",
+      "placa": null,
+      "valor": 345555.0,
+      "cpf": 0,
+      "cor": "wqeqweqwewq"
     }
   ],
   "camionetes": [
