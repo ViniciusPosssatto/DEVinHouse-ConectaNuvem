@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7edbe80c-f243-4f59-a6f7-e47d3c080c26" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana06/projeto-1/app/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana06/projeto-1/app/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana06/projeto-1/app/data/database.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana06/projeto-1/app/data/database.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana06/projeto-1/app/entity/retorna_infos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana06/projeto-1/app/entity/retorna_infos/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana06/projeto-1/app/menu/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Aulas/treino_em_aula-semana06/projeto-1/app/menu/__init__.py" afterDir="false" />
-    </list>
+    <list default="true" id="7edbe80c-f243-4f59-a6f7-e47d3c080c26" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +32,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/teste_docker" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
