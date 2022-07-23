@@ -24,3 +24,8 @@ WHERE carga_horaria > 30
 -- MATRICULAS
 SELECT mat_aluno, status from universidade.matriculas m
 where m.status='R'
+
+SELECT * from universidade.matriculas m
+inner join universidade.alunos a on m.mat_aluno = a.mat_aluno
+where m.status='R'
+order by nota
