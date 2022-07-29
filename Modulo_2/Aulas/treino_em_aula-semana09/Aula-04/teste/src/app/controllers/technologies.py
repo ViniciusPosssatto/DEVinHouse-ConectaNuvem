@@ -1,4 +1,3 @@
-import re
 from flask import Blueprint, jsonify, request
 from src.app.db import read, save
 from src.app.utils import exist_key, exist_value
