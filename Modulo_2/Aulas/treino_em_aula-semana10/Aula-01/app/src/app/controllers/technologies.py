@@ -1,8 +1,8 @@
 from flask import Blueprint, jsonify, request
 from src.app.db import read, save
-from src.app.utils import exist_key, exist_value
-from src.app.models import Technology, technologies_share_schema
-from src.app import db
+from src.app.utils import exist_key
+from src.app.models.technologies import Technology, technologies_share_schema
+from src.app import DB
 
 
 technology = Blueprint('technology', __name__, url_prefix="/technology")
@@ -14,7 +14,7 @@ def get_all_technologies():
 
     techs_query = Technology.query.all()
 
-    techs = technologies_share_schema(techs_query)
+    techs = technologies_share_schema.dump(techs_query)
 
     if len(techs) == 0:
         return {"message": "Não tem tecnologias salvas."}, 200
@@ -33,8 +33,8 @@ def insert_new_technologies():
 
     tech = Technology(name=data['name'])
 
-    db.session.add(tech)
-    db.session.commit()
+    DB.session.add(tech)
+    DB.session.commit()
 
     return {"message": "Tecnologia salva no DB."}, 201
     
