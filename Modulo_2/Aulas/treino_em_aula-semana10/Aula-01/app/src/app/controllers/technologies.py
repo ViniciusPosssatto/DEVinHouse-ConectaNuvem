@@ -1,4 +1,5 @@
 from flask import Blueprint, jsonify, request
+import requests
 from src.app.db import read, save
 from src.app.utils import exist_key
 from src.app.models.technologies import Technology, technologies_share_schema
@@ -12,13 +13,15 @@ technology = Blueprint('technology', __name__, url_prefix="/technology")
 @technology.route('/getAllTechs', methods=["GET"])
 def get_all_technologies():
 
-    techs_query = Technology.query.all()
+    data = requests.get('https://randomuser.me/api/?nat=br&results=100')
+    # techs_query = Technology.query.all()
 
-    techs = technologies_share_schema.dump(techs_query)
+    # techs = technologies_share_schema.dump(techs_query)
 
-    if len(techs) == 0:
-        return {"message": "Não tem tecnologias salvas."}, 200
-    return jsonify(techs), 200
+    # if len(techs) == 0:
+    #     return {"message": "Não tem tecnologias salvas."}, 200
+    
+    return jsonify(data.json()['results']), 200
 
 
 @technology.route('/insertTechs', methods=["POST"])
