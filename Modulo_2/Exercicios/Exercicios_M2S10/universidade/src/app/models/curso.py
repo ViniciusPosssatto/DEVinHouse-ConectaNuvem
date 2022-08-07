@@ -1,6 +1,6 @@
 from src.app import db, ma
 from src.app.models.departamento import Departamento
-# from src.app.models.matrizes_cursos import mat_cursos
+# from src.app.models.matrizes_cursos import matrizes_curso
 
 
 class Curso(db.Model):
@@ -8,6 +8,7 @@ class Curso(db.Model):
     cod_curso = db.Column(db.Integer, primary_key=True)
     nome_curso = db.Column(db.String(50), nullable=False)
     cod_dpto = db.Column(db.Integer, db.ForeignKey(Departamento.cod_dpto), nullable=False)
+    curso_aluno = db.relationship('Aluno', backref='cursos')
 
     def __init__(self, cod_curso, nome_curso, cod_dpto):
         self.cod_curso = cod_curso

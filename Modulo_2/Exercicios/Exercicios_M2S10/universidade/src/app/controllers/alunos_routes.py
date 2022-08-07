@@ -1,10 +1,14 @@
-from flask import Blueprint
+from flask import Blueprint, jsonify, json
+from src.app.models.aluno import Aluno, alunos_shared_schema
 
 
-university = Blueprint('university', __name__, url_prefix="/university")
+alunos_route = Blueprint('alunos_route', __name__, url_prefix="/alunos")
 
 
-@university.route('/', methods=["GET"])
+@alunos_route.route('/getAllAlunos', methods=["GET"])
 def list_all_alunos():
     data = Aluno.query.all()
-    return jsonify(data)
+    
+    data_dict = alunos_shared_schema.dump(data)
+    
+    return jsonify(data_dict)

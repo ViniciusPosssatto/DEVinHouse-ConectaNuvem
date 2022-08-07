@@ -9,6 +9,7 @@ class Aluno(db.Model):
     data_entrada = db.Column(db.Date, nullable=False)
     cotista = db.Column(db.Boolean, nullable=True, default=False)
     cod_curso = db.Column(db.Integer, db.ForeignKey(Curso.cod_curso), nullable=False)
+    mat_aluno = db.relationship('Matricula', backref='alunos')
 
     def __init__(self, mat_alu, nome, data_entrada, cotista, cod_curso):
         self.mat_alu = mat_alu
