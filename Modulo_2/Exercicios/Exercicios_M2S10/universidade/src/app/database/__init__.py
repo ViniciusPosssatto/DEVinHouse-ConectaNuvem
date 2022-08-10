@@ -1,17 +1,17 @@
 
 from src.app.database.dados.management_data import PopulateDB
-from src.app.models.aluno import Aluno, AlunoSchema
-from src.app.models.departamento import Departamento, DepartamentoSchema
-from src.app.models.disciplina import Disciplina, DisciplinaSchema
-from src.app.models.curso import Curso, CursoSchema
-from src.app.models.matricula import Matricula, MatriculaSchema
-# from src.app.models.matrizes_cursos import matriz_disc, matriz_cursos
+from src.app.models.aluno import Aluno
+from src.app.models.departamento import Departamento
+from src.app.models.disciplina import Disciplina
+from src.app.models.cursoss import CursoModel
+from src.app.models.matricula import Matricula
+# from src.app.models.matrizes_cursos import Matrizes
 
 
 def insert_into_DB():
 
     dados = Departamento.query.first()
-    print(dados)
+    # print(PopulateDB().populate_matrizes())
 
     if dados != None:
         print('Já existem dados no banco.')
@@ -20,8 +20,9 @@ def insert_into_DB():
     for item in PopulateDB().populate_dpto():
         Departamento.seed(cod_dpto=item['cod_dpto'], nome_dpto=item['nome_dpto'])
     
-    for item in PopulateDB().populate_cursos():
-        Curso.seed(cod_curso=item['cod_curso'], nome_curso=item['nome_curso'], cod_dpto=item['cod_dpto'])
+    for item in PopulateDB().populate_m():
+        print(item)
+        CursoModel.seed(cod_curso=item['cod_curso'], nome_curso=item['nome_curso'], cod_dpto=item['cod_dpto'], matriz=item['cod_curso'])
 
     for item in PopulateDB().populate_alunos():
         if item['cotista'] == 'N':
@@ -38,5 +39,8 @@ def insert_into_DB():
     for item in PopulateDB().populate_matriculas():
         Matricula.seed(semestre=item['semestre'], mat_alu=item['mat_alu'], cod_disc=item['cod_disc'], nota=item['nota'], \
             faltas=item['faltas'], status=item['status'])
+
+    # for item in PopulateDB().populate_matrizes():
+    #     cod_curso=item['cod_curso'], cod_disc=item['cod_disc'], periodo=item['periodo']
 
     return print('Dados inseridos no DB.')

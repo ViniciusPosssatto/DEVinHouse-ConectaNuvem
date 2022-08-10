@@ -1,5 +1,6 @@
-from flask import Blueprint, jsonify, json
-from sqlalchemy import update, insert, delete
+from flask import Blueprint, jsonify
+from sqlalchemy import delete
+from src.app import db
 from src.app.models.aluno import Aluno, alunos_shared_schema
 
 
@@ -20,6 +21,17 @@ def attDadosAluno():
     dados = Aluno.query.filter_by(mat_alu=107970).first()
     dados.nome = "Jao Gross Sauro"
     Aluno.save(dados)
+
+    return {"Concluido"}, 200
+
+
+@alunos_route.route('/deleteAluno', methods=['DELETE'])
+def delete_aluno():
+    # dados = Aluno.query.filter_by(mat_alu=107970).first()
+ 
+    data = Aluno.query.filter_by(mat_alu=107970).first()
+    print(data.nome)
+    # db.execute(data)
 
     return {"Concluido"}, 200
 

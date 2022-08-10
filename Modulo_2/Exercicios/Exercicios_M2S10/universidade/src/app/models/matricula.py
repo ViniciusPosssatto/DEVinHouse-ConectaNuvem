@@ -1,6 +1,6 @@
 from src.app import db, ma
-from src.app.models.aluno import Aluno
-from src.app.models.disciplina import Disciplina
+from src.app.models.aluno import Aluno, aluno_shared_schema
+from src.app.models.disciplina import Disciplina, disciplina_shared_schema
 
 
 class Matricula(db.Model):
@@ -12,6 +12,8 @@ class Matricula(db.Model):
     nota = db.Column(db.Float, nullable=True, default=0)
     faltas = db.Column(db.Integer, nullable=True, default=0)
     status = db.Column(db.String(1), nullable=False)
+    aluno_mat = db.relationship('Aluno', foreign_keys=mat_alu)
+    aluno_disc = db.relationship('Disciplina', foreign_keys=cod_disc)
 
     def __init__(self, semestre, mat_alu, cod_disc, nota, faltas, status):
         self.semestre = semestre
@@ -39,8 +41,10 @@ class Matricula(db.Model):
 
 
 class MatriculaSchema(ma.Schema):
+    aluno_mat = ma.Nested(aluno_shared_schema)
+    aluno_disc = ma.Nested(disciplina_shared_schema)
     class Meta:
-        fields = ('semestre', 'mat_alu', 'cod_disc', 'nota', 'faltas', 'status')
+        fields = ('semestre', 'mat_alu', 'cod_disc', 'nota', 'faltas', 'status', 'aluno_mat', 'aluno_disc')
 
 
 matricula_shared_schema = MatriculaSchema()

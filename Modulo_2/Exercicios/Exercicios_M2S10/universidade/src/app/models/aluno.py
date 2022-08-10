@@ -1,5 +1,5 @@
 from src.app import db, ma
-from src.app.models.curso import Curso
+from src.app.models.cursoss import CursoModel, curso_shared_schema
 
 
 class Aluno(db.Model):
@@ -8,8 +8,8 @@ class Aluno(db.Model):
     nome = db.Column(db.String(100), nullable=False)
     data_entrada = db.Column(db.Date, nullable=False)
     cotista = db.Column(db.Boolean, nullable=True, default=False)
-    cod_curso = db.Column(db.Integer, db.ForeignKey(Curso.cod_curso), nullable=False)
-    mat_aluno = db.relationship('Matricula', backref='alunos')
+    cod_curso = db.Column(db.Integer, db.ForeignKey(CursoModel.cod_curso), nullable=False)
+    curso_aluno = db.relationship('CursoModel', foreign_keys=[cod_curso])
 
     def __init__(self, mat_alu, nome, data_entrada, cotista, cod_curso):
         self.mat_alu = mat_alu
@@ -35,8 +35,9 @@ class Aluno(db.Model):
 
 
 class AlunoSchema(ma.Schema):
+    curso_aluno = ma.Nested(curso_shared_schema)
     class Meta:
-        fields = ('mat_alu', 'nome', 'cotista', 'cod_curso')
+        fields = ('mat_alu', 'nome', 'cotista', 'cod_curso', 'curso_aluno')
 
 
 aluno_shared_schema = AlunoSchema()

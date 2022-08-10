@@ -63,3 +63,13 @@ class PopulateDB:
         self.matrizes.remove(self.matrizes[0])
 
         return self.matrizes
+    
+    def populate_m(self):
+        with open("src\\app\database\dados\matrizes.csv", "r") as file:
+            arquivo_csv = csv.reader(file, delimiter=",")
+            for i in arquivo_csv:
+                self.cursos.append({'cod_curso': i[0], 'cod_disc': i[1], 'periodo': i[2]})
+        # self.cursos.remove(self.matrizes[0])
+
+        return self.cursos
+

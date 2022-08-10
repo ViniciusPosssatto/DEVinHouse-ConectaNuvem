@@ -5,7 +5,6 @@ class Departamento(db.Model):
     __tablename__ = 'departamentos'
     cod_dpto = db.Column(db.Integer, primary_key=True)
     nome_dpto = db.Column(db.String(50), nullable=False)
-    dpto_curso = db.relationship('Curso', backref='departamentos')
 
     def __init__(self, cod_dpto, nome_dpto):
         self.cod_dpto = cod_dpto

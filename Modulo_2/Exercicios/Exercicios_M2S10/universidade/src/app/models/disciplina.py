@@ -1,4 +1,5 @@
 from src.app import db, ma
+# from src.app.models.cursoss import matriz_cursos
 
 
 class Disciplina(db.Model):
@@ -6,7 +7,7 @@ class Disciplina(db.Model):
     cod_disc = db.Column(db.Integer, primary_key=True)
     nome_disc = db.Column(db.String(50), nullable=False)
     carga_horaria = db.Column(db.Float, nullable=False)
-    mat_disc = db.relationship('Matricula', backref='disciplinas')
+    # disc_aluno = db.relationship('Curso', secondary= matriz_cursos, backref='disciplinas')
 
     def __init__(self, cod_disc, nome_disc, carga_horaria):
         self.cod_disc = cod_disc
