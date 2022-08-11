@@ -1,7 +1,6 @@
 from src.app import db, ma
 from src.app.models.departamento import Departamento, departamento_shared_schema
 from src.app.models.disciplina import DisciplinaSchema
-# from src.app.models.matrizes_cursos import matriz_cursos
 
 
 matriz_cursos = db.Table('matrizes_cursos', 
@@ -16,24 +15,21 @@ class CursoModel(db.Model):
     nome_curso = db.Column(db.String(50), nullable=False)
     cod_dpto = db.Column(db.Integer, db.ForeignKey(Departamento.cod_dpto), nullable=False)
     dpto = db.relationship('Departamento', foreign_keys=[cod_dpto])
-    disc_aluno = db.relationship('Disciplina', secondary= matriz_cursos, backref='cursos')
-    periodo = db.Column(db.Integer, nullable=False)
+    disc_curso = db.relationship('Disciplina', secondary= matriz_cursos, backref='cursos')
 
-    def __init__(self, cod_curso, nome_curso, cod_dpto, matriz, periodo):
+    def __init__(self, cod_curso, nome_curso, cod_dpto, disc_curso):
         self.cod_curso = cod_curso
         self.nome_curso = nome_curso
         self.cod_dpto = cod_dpto
-        self.matriz = matriz
-        self.periodo =periodo
+        self.disc_curso = disc_curso
     
     @classmethod
-    def seed(cls, cod_curso, nome_curso, cod_dpto, matriz, periodo):
+    def seed(cls, cod_curso, nome_curso, cod_dpto, disc_curso):
         curso = CursoModel(
             cod_curso=cod_curso, 
             nome_curso=nome_curso, 
             cod_dpto=cod_dpto,
-            matriz=matriz,
-            periodo=periodo
+            disc_curso=disc_curso
         )
         curso.save()
 
@@ -41,11 +37,12 @@ class CursoModel(db.Model):
         db.session.add(self)
         db.session.commit()
 
+
 class CursoSchema(ma.Schema):
-    matriz = ma.Nested(DisciplinaSchema, many=True)
+    disc_curso = ma.Nested(DisciplinaSchema, many=True)
     dpto = ma.Nested(departamento_shared_schema)
     class Meta:
-        fields = ('cod_curso', 'nome_curso', 'cod_dpto', 'dpto', 'matriz', 'periodo')
+        fields = ('cod_curso', 'nome_curso', 'cod_dpto', 'dpto', 'disc_curso')
 
 
 curso_shared_schema = CursoSchema()
