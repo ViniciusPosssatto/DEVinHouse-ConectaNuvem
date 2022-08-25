@@ -11,7 +11,6 @@ from src.app.models.matricula import Matricula
 def insert_into_DB():
 
     dados = Departamento.query.first()
-    # print(PopulateDB().populate_matrizes())
 
     if dados != None:
         print('Já existem dados no banco.')
@@ -26,7 +25,7 @@ def insert_into_DB():
     
     #INSERE DADOS EM CURSOS E FAZ RELAÇÃO COMA TABELA MATRIZES_CURSOS(SATÉLITE)
     for item in PopulateDB().populate_cursos():
-        cod_disc = Disciplina.query.filter(Disciplina.cod_disc.in_(PopulateDB().retira_codigos('curso_'+item['cod_curso']))).all()
+        cod_disc = Disciplina.query.filter(Disciplina.cod_disc.in_(PopulateDB().retira_codigos(item['cod_curso']))).all()
         CursoModel.seed(cod_curso=item['cod_curso'], nome_curso=item['nome_curso'], cod_dpto=item['cod_dpto'], disc_curso=cod_disc)
 
     #INSERE DADOS EM ALUNOS

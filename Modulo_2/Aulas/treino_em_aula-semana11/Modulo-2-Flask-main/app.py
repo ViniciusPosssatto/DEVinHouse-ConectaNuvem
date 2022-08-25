@@ -15,13 +15,13 @@ routes(app)
 def call_command():
   populate_db()
 
-@click.command(name='delete_tables') #Comando para deletar as tabelas do banco de dados
+@click.command(name='drop_all_tables') #Comando para deletar as tabelas do banco de dados
 @with_appcontext #Verificação no flask, que identifica o comando que executará a função abaixo.
-def delete_tables():
+def drop_all_tables():
   DB.drop_all()
 
 app.cli.add_command(call_command)#Adicionar na instanciação do Flask para encontrar o comando.
-app.cli.add_command(delete_tables)#Adicionar na instanciação do Flask para encontrar o comando.
+app.cli.add_command(drop_all_tables)#Adicionar na instanciação do Flask para encontrar o comando.
 
 
 if __name__ == "__main__":

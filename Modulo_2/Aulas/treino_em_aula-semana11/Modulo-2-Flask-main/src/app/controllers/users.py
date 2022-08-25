@@ -2,6 +2,7 @@ import re
 import requests
 import json
 
+from flasgger import swag_from
 from flask import Blueprint, request, current_app, jsonify
 from flask.globals import session
 from flask.wrappers import Response
@@ -70,6 +71,7 @@ def create():
   )
 
 @user.route('/login', methods = ["POST"])
+@swag_from('\swagger\\algo.yaml')
 def login():
   list_keys = ["email", "password"]
 

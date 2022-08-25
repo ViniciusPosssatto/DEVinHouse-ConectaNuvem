@@ -1,0 +1,29 @@
+User log in
+---
+tags:
+  - Authentication
+parameters:
+  - name: body
+    description: sfsdfdsgsdgsgdsgsdg
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+      - "email"
+      - "password"
+    properties:
+      email:
+        type: "email"
+        example: "user@user.com"
+      password:
+        type: "string"
+        example: "********"
+responses:
+  200:
+    description: e32r323f33c3c3c3c3c
+
+  400:
+    description: fasdafwfqefqwefew
+  
+  404: 3ewcasdcasasasasdasdsrc\app\swagger\algo.yaml

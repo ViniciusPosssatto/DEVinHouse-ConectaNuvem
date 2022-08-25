@@ -66,39 +66,39 @@ class PopulateDB:
             for i in arquivo_csv:
                 matrizes.append({'cod_curso': i[0], 'cod_disc': i[1], 'periodo': i[2]})
         matrizes.remove(matrizes[0])
-        
-        curso_ = []
+        # curso_ = []
         cursos_dict = {
-            'curso_26' : [], 'curso_35' : [],'curso_52' : [], 'curso_44' : [],'curso_131' : [],'curso_95' : [],'curso_125' : [],'curso_103' : [],
-            'curso_123' : [], 'curso_4' : [], 'curso_13' : []
+            '26' : [], '35' : [],'52' : [], '44' : [],'131' : [],'95' : [],'125' : [],'103' : [],
+            '123' : [], '4' : [], '13' : []
             }
 
-        for curso in PopulateDB().populate_cursos():
-            curso_.append(list(filter(lambda x: x['cod_curso'] == curso['cod_curso'], matrizes)))
+        # for curso in PopulateDB().populate_cursos():
+        #     curso_.append(list(filter(lambda x: x['cod_curso'] == curso['cod_curso'], matrizes)))
 
-        for item in curso_:
-            if item[0]['cod_curso'] == '26':
-                cursos_dict['curso_26'].append(item)
-            elif item[0]['cod_curso'] == '13':
-                cursos_dict['curso_13'].append(item)
-            elif item[0]['cod_curso'] == '35':
-                cursos_dict['curso_35'].append(item)
-            elif item[0]['cod_curso'] == '4':
-                cursos_dict['curso_4'].append(item)
-            elif item[0]['cod_curso'] == '52':
-                cursos_dict['curso_52'].append(item)
-            elif item[0]['cod_curso'] == '44':
-                cursos_dict['curso_44'].append(item)
-            elif item[0]['cod_curso'] == '131':
-                cursos_dict['curso_131'].append(item)
-            elif item[0]['cod_curso'] == '95':
-                cursos_dict['curso_95'].append(item)
-            elif item[0]['cod_curso'] == '125':
-                cursos_dict['curso_125'].append(item)
-            elif item[0]['cod_curso'] == '103':
-                cursos_dict['curso_103'].append(item)
-            elif item[0]['cod_curso'] == '123':
-                cursos_dict['curso_123'].append(item)
+        # for item in curso_:
+        for item in matrizes:
+            if item['cod_curso'] == '26':
+                cursos_dict['26'].append(item)
+            elif item['cod_curso'] == '13':
+                cursos_dict['13'].append(item)
+            elif item['cod_curso'] == '35':
+                cursos_dict['35'].append(item)
+            elif item['cod_curso'] == '4':
+                cursos_dict['4'].append(item)
+            elif item['cod_curso'] == '52':
+                cursos_dict['52'].append(item)
+            elif item['cod_curso'] == '44':
+                cursos_dict['44'].append(item)
+            elif item['cod_curso'] == '131':
+                cursos_dict['131'].append(item)
+            elif item['cod_curso'] == '95':
+                cursos_dict['95'].append(item)
+            elif item['cod_curso'] == '125':
+                cursos_dict['125'].append(item)
+            elif item['cod_curso'] == '103':
+                cursos_dict['103'].append(item)
+            elif item['cod_curso'] == '123':
+                cursos_dict['123'].append(item)
         
         return cursos_dict
 
@@ -108,6 +108,6 @@ class PopulateDB:
         count = 0
         for item in PopulateDB().matrizes_dict().get(key):
             while count < len(item):
-                list.append(item[count]['cod_disc'])
+                list.append(item['cod_disc'])
                 count += 1
         return list
