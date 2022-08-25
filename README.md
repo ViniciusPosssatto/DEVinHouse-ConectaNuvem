@@ -20,5 +20,7 @@
 - DevOps
 - Docker
 - Kubernetes
+- NoSQL
+- Flask + noSQL
 
 
