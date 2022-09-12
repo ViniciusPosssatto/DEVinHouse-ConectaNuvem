@@ -1,0 +1,99 @@
+_________KUBERNETES___________
+
+falamos sobre instalação do Kubernetes. No docker desktop basta clicar no check box para habilitar. Via liha de comando basta seguir os passos a seguir:
+
+1° Docker deve estar instalado com comando:
+curl -fsSl https://get.docker.com | bash
+
+se já estiver instalado, seguir para passo 2.
+
+2° para adicionar o repositório do kubernetes precisamos importar o certificado:
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+
+3° agora podemos adicionar o repositório:
+echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+
+4° agora podemos instalar os componentes kubeadm, kubectl e kubelet:
+apt-get install kubeadm kubectl kubelet -y
+
+
+_______MINIKUBE_____
+
+Para simular um cluster kubernetes em node único precisamos instalar o minikube:
+
+1° sudo apt install -y curl wget apt-transport-https
+2° wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+3° sudo cp minikube-linux-amd64 /usr/local/bin/minikube
+4° sudo chmod +x /usr/local/bin/minikube
+5° minikube start --driver=none
+
+minikube status >> informa se minikube está rodando
+
+
+kubectl run teste  --image=nginx   > subir um pod (container) com imagem nginx (servidor web)
+
+kubectl create deployment teste --image=nginx --replicas=2   >> Criar um deploy que criará automaticamente dois pods com imagem do nginx
+
+
+kubectl get nodes > mostra quandos nodes temos em nosso cluster e o status de cada um.
+kubectl get service > mostra os servicos criados 
+kubectl get deploy > mostra os deploy criados
+kubectl get pods > mostra os pods em execução
+kubectl get secret > mostra os arquivos de senha secret criados
+kubectl get namespaces > mostra os namespaces criados no kubernetes (os default pelo kubernetes e os criados por aplicações)
+
+kubectl apply -f arquivo.yaml --namespace=nomeNamespace  >> subir uma aplicação em namespace específica. 
+
+
+kubectl apply -f arquivo.yaml > executa o arquivo em formato yaml. Se o kind do arquivo for um Service, o kubernetes criará o serviço, por exemplo. 
+
+kubectl delete -f arquivo.yaml > deleta tudo que foi criado  a partir do arquivo yaml. 
+kubectl delete pod nome_pod > deleta o pod informado
+kubectl delete deploy nome_deploy > deleta deploy informado...
+
+
+kubectl get deploy nomeDeploy -o yaml > arquivo-result.yaml    >>> exportar em arquivo formato yaml do deploy em execução. 
+
+
+kubectl describe service nome_servico  >  detalha mais informações sobre o serviço. 
+kubectl describe pod nome_pod > detalha mais informações sobre o pod
+kubectl describe secret nome_secret > detalha mais informações sobre a secret.
+kubectl describe deploy nome_deploy > detalha mais informações sobre o deploy
+
+
+
+
+___EXPOSE
+
+Para expor um serviço para ser acessível de fora do cluster por exemplo, podemos fazer via comando quando aplicação já foi criada ou via arquivo yaml::
+
+kubectl expose deployment "nome-aplicacao-deployment" --type=LoadBalancer --name=servico-aplicacao
+
+minikube service --all  >> retornará os serviços bem como a url:port dos serviços expostos. 
+
+___ESCALAR APLICAÇÃO 
+
+kubectl autoscale deployment teste --min=2 --max=10
+
+ou via arquivo .yaml 
+
+
+atualizar imagem de uma aplicação em execução : 
+kubectl set image deployment/teste nginx=nginx:alpine
+
+usamos o nginx na versão alpine como exemplo. Após o comando vimos os pods novos sendo criados e os antigos sendo terminados. 
+
+
+### docker push #### 
+
+primeiramente logar na plataforma:
+docker login
+
+enviar imagem para docker hub:
+docker push Nome_Usuario_Docker_Hub/nome_Imagem:tag
+
+se imagem não estiver nomeada no padrão com nome de usuário do docker hub:
+
+docker tag ID_IMAGEM Nome_Usuario_Docker_Hub/nome_Imagem:tag
+
+agora executar o docker push..

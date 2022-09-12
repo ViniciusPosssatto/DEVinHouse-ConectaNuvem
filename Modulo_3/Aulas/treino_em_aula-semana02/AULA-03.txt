@@ -1,0 +1,53 @@
+#### Docker Swarm (formação de cluster e orquestração de container do docker) ###
+
+1° comando de inicialização do Swarm mode no node Master
+
+docker swarm init 
+
+podemos especificar um ip 
+
+docker swarm init  --listen-addr ip_master
+
+2° ingressão dos nodes workers
+
+copiar comando join gerado no master para dentro dos workers
+
+3° listar os nodes do cluster
+
+docker nodes ls 
+
+4° criar os serviços em modo cluster a partir do docker-compose file
+docker stack deploy --compose-file=docker-compose.yml testeswarm
+
+subimos o container do visualizer para vermos graficamente nosso cluster:
+
+docker run -it -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock dockersamples/visualizer
+
+5° listar servicos criados 
+docker service ls >> no node master apenas
+
+detalhes de onde cada servico está rodando:
+docker service ps nomeservico
+
+6° escalar nosso serviço 
+docker service scale testeswarm_adminer-compose=2
+
+7° excluir serviços criados a partir do stack deploy (semelhante ao docker-compose down)
+docker stack rm nomeservico-stack-deploy
+
+OBS: para acessar no adminer, o servidor é o nome do container com postgres. No caso, postgres-compose
+
+criando um serviço do redis:
+
+docker service create \
+  --replicas 3 \
+  --name redis \
+  --update-delay 10s \
+  redis:3.0.6
+
+atualizando a imagem para versão 3.0.7 (observar a atualização dos serviços em paralelismo):
+
+docker service update --image redis:3.0.7 redis
+
+
+

@@ -1,0 +1,196 @@
+# vimos que é possível executarmos comandos para dentro do container. A sintáxe básica é a seguinte: 
+
+docker exec nomecontainer COMMAND 
+
+# Um exemplo mais comum seria enviar comando /bin/bash com opção -it para termos o terminal do container a nossa disposição. Fica assim:
+
+docker exec -it teste-php-apache /bin/bash 
+
+# para nosso exemplo do PHP, foi necessário enviar comando para instalação da função MYSQLI para conexão com banco mysql:
+
+docker exec teste-php-apache docker-php-ext-install mysqli   
+
+
+# continuamos a configuração da aplicação em PHP copiando o arquivo de configuração para dentro do diretório específico
+
+# COPIAR ARQUIVOS PARA DENTRO DO CONTAINER:
+docker cp host file directory container name:/container file directory.
+docker cp C:\Users\gabriel.ti\Desktop\php.ini teste-php-apache:/usr/local/etc/php
+
+### DOCKER-COMPOSE ###
+
+# exemplo de docker-compose em formato .yml
+
+version: "3"
+services:
+  web:
+    image: php:7.4-apache
+    container_name: teste-php-apache
+    ports:
+      - "80:80"
+    volumes:
+      - C:\Users\gabriel.ti\projeto:/var/www/html/projeto
+     
+     
+  banco: 
+    image: mysql
+    container_name: teste-mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - C:\Users\gabriel.ti\db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD:rootdb__
+
+
+# comando para executar o compose file
+
+docker-compose -f docker-compose.yml up -d  >> iniciar aplicativo
+docker-compose -f docker-compose.yml down >> parar aplicativo
+
+# exemplo em container da aplicação adminer + postgres
+
+criando banco postgres
+docker run --name postgres -e POSTGRES_PASSWORD=password -d postgres
+
+acessando gerencianmentro via adminer
+docker run -d --link postgres:postgres -p 8080:8080 adminer
+
+# arquivo .yml do adminer + postgres
+
+version: "3"
+services:
+  postgres-compose:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+  adminer-compose:
+    image: adminer
+    container_name: adminer-container
+    ports:
+      - "8080:8080"
+    links:
+      - postgres-compose:postgres
+
+### Dockerfile #####
+
+para criar uma imagem própria usamos:
+
+docker build .   >> compila o Dockerfile que está no diretório corrente. 
+
+ou usamos 
+
+docker build -t nomeImagem:tag .  >> compila o Dockerfile que está no diretório corrente passando um nome e versão para imagem gerada.
+
+Para subir o container com a imagem gerada, usamos:
+docker run -d nomeImagem:tag
+
+
+
+
+### Projeto JAVA com servidor web WildflY ###
+
+
+
+repositório executado: https://github.com/TechDive-IST/m03s01
+
+com o arquivo .war gerado (comando mvn clean install) podemos subir container com imagem do Wildfly
+
+
+# subindo container sem arquivo .war 
+
+docker run --name java-api -p 8080:8080 -p 9990:9990 -it quay.io/wildfly/wildfly /opt/jboss/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
+
+# copiar arquvo .war após container estar UP
+
+docker cp C:\Users\gabriel.ti\java-wild\m03s01-1.0-SNAPSHOT.war java-api:/opt/jboss/wildfly/standalone/deployments/
+
+assim, a aplicação (API) em java está disponível em: http://localhost:8080/m03s01-1.0-SNAPSHOT/
+
+# para criar usuário com acesso ao console admin:
+
+docker exec -it java-api /opt/jboss/wildfly/bin/add-user.sh gabriel gabriel1 --silent
+
+# via DOCKERFILE ficaria:
+
+FROM quay.io/wildfly/wildfly
+ADD m03s01-1.0-SNAPSHOT.war /opt/jboss/wildfly/standalone/deployments/
+
+RUN /opt/jboss/wildfly/bin/add-user.sh gabriel gabriel1 --silent
+CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
+
+_____________________________
+
+# próximo passo é compilar o dockerfile:
+
+docker build -t wildflyapi:2.0 .
+
+# com dockerfile gerado bastaria subir container mencionando imagem gerada. O container resultante seria exatamente igual ao o que geramos apenas com container e comandos de cópia e criação de usuários:
+
+docker run -p 8080:8080 -p 9990:9990 wildflyapi:2.0
+
+# subindo a mesma aplicação via arquivo docker-compose ao invés de container (pelo comando docker run) usado:
+
+version: "3"
+services:
+  apijava:
+    image: wildflyapi:2.0
+    container_name: java-app-wildfly
+    ports:
+      - "8080:8080"
+      - "9990:9990"
+
+
+### DOCKER INSPECT E DOCKER LOGS ###
+Falamos sobre o comando docker inspect que nos permite ver mais detalhes dos container e imagens:
+
+docker inspect nomeContainer
+docker inspect images
+
+
+"docker logs nomeContainer" para verificação de logs 
+
+
+## container para aplicações em C#, .NET ###
+
+C# em .exe:
+
+docker run --rm --name dotnet -v C:\Users\gabriel.ti\c#:/usr/app -w /usr/app mono mono helloworld.exe
+
+--rm: container será excluído apos execução
+-w: informa qual será workdir, diretório padrão do container
+
+
+
+### container hello world em java ### 
+
+docker run --rm -v C:\Users\gabriel.ti\java:/usr/src/myapp -w /usr/src/myapp openjdk:11 javac Main.java
+docker run -v C:\Users\gabriel.ti\java:/usr/src/myapp -w /usr/src/myapp openjdk:11 java HelloWorld
+
+o Dockerfile correspondente aos container seria:
+ 
+
+from openjdk:11
+copy . /usr/src/myapp
+workdir /usr/src/myapp
+run javac main.java
+entrypoint ["java", "HelloWorld"]
+
+_______________________ FIM Dockerfile
+compilando Dockerfile:
+
+docker build -t javadockerfile:1.0 .
+
+container para executar Dockerfile gerado:
+
+docker run --name java-docker javadockerfile:1.0
+
+
+
+
+
+
+
+
