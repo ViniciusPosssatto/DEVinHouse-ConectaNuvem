@@ -22,6 +22,7 @@ class State(DB.Model):
       initials = initials
     )
     state.save()
+    return state
 
   def save(self):
     DB.session.add(self)

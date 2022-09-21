@@ -15,6 +15,7 @@ class Technology(DB.Model):
       name = name
     )
     tech.save()
+    return tech
 
   def save(self):
     DB.session.add(self)
