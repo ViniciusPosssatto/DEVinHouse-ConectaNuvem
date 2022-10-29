@@ -1,22 +1,63 @@
-from crypt import methods
-import json
 from flask import Blueprint
 from flask.wrappers import Response
+from src.app import mongo_client
+from bson import json_util
 
 
-movies = Blueprint("movies", __name__, url_prefix="/movies")
+movies = Blueprint("movies", __name__,  url_prefix="/movies")
 
-
-@movies.route("get_all_movies", methods=["GET"])
+@movies.route("/get_all_movies", methods = ["GET"])
 def get_all_movies():
-    return Response(
-        response=json.dumps({"records": [
-            {"name": "Senhor dos aneis","id": 1},
-            {"name": "Fast and furious","id": 2},
-            {"name": "Aqueles que não foram","id": 3},
-            {"name": "Miranha 2","id": 4},
-            {"name": "snake e drake","id": 5}
-            ]}),
-            status=200,
-            mimetype="application/json"
-    )
+  movies = mongo_client.movies.aggregate([
+    {
+        '$lookup': {
+            'from': 'comments', 
+            'localField': '_id', 
+            'foreignField': 'movie_id', 
+            'as': 'comments'
+        }
+    }, {
+        '$match': {
+            'comments': {
+                '$ne': []
+            }
+        }
+    }, {
+        '$project': {
+            'count': {
+                '$size': '$comments'
+            }
+        }
+    },
+    {
+      "$limit": 10
+    }
+  ])
+
+  return Response(
+    response=json_util.dumps({'records' : movies}),
+    status=200,
+    mimetype="application/json"
+  )
+
+
+#  import json
+# from flask import Blueprint
+# from flask.wrappers import Response
+# from src.app import mongo_client
+# from bson import json_util
+
+
+# movies = Blueprint("movies", __name__, url_prefix="/movies")
+
+
+# @movies.route("get_all_movies", methods=["GET"])
+# def get_all_movies():
+#     print(mongo_client)
+#     movies = mongo_client.cast.find()
+  
+#     return Response(
+#         response=json_util.dumps({"records": movies}),
+#         status=200,
+#         mimetype="application/json"
+#     )
