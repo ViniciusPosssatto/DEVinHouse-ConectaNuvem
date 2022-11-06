@@ -1,6 +1,7 @@
 <template>
   <div class="bg">
     <input
+      name="input-value"
       v-model="mediaFinal"
       type="number"
       step="0.5"
