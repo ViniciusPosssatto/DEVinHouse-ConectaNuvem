@@ -1,10 +1,10 @@
 <template>
   <div class="bg">
-    <button class="button" @click="onClickVoltar">Anterior</button>
+    <button id="btn1" class="button" @click="onClickVoltar">Anterior</button>
 
     <h1>Página atual: {{ numeroPaginaAtual }}</h1>
 
-    <button class="button" @click="onClickAvancar">Próxima</button>
+    <button id="btn2" class="button" @click="onClickAvancar">Próxima</button>
   </div>
 </template>
 
@@ -19,11 +19,11 @@ export default {
   methods: {
     onClickVoltar() {
       if (this.numeroPaginaAtual > 1) {
-        this.numeroPaginaAtual = this.numeroPaginaAtual - 1;
+        this.numeroPaginaAtual--;
       }
     },
     onClickAvancar() {
-      this.numeroPaginaAtual = this.numeroPaginaAtual + 1;
+      this.numeroPaginaAtual++;
     },
   },
 };
